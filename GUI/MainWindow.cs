@@ -961,6 +961,12 @@ namespace EnhancedMap.GUI
 
             if (MouseManager.LeftIsPressed || e.Button == MouseButtons.Middle)
             {
+                int xLong = 0, yLat = 0, xMins = 0, yMins = 0;
+                bool xEast = false, ySouth = false;
+                var format = Utility.FormatCoordinates(new Point(MouseManager.Location.X, MouseManager.Location.Y), Global.Maps[Global.Facet], ref xLong, ref yLat, ref xMins, ref yMins, ref xEast, ref ySouth);
+
+                if (format)
+                    MouseManager.LocationXY = string.Format("{0},{1}", (int)MouseManager.Location.X, (int)MouseManager.Location.Y);
                 if (TopMost && !Global.FreeView && e.Button != MouseButtons.Middle)
                 {
                     _dragging = true;

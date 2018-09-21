@@ -12,5 +12,7 @@ namespace EnhancedMap.Core
         public static bool IsDragging => LeftIsPressed && IsMove;
 
         public static bool IsOverAnObject { get; set; }
+
+        public static string LocationXY { get; set; }
     }
 }
