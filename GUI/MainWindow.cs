@@ -30,10 +30,14 @@ namespace EnhancedMap.GUI
         private bool _requestRefresh;
         private readonly System.Windows.Forms.Timer _timer;
 
+        private SpawnEntryWindow spawnEntrywindow = new SpawnEntryWindow();
+
         public MainWindow()
         {
             InitializeComponent();
-
+            spawnEntrywindow.StartPosition = FormStartPosition.Manual;
+            spawnEntrywindow.Left = 800;
+            spawnEntrywindow.Top = 1;
             Global.MainWindow = this;
 
             MaximumSize = new Size(1200, 1200);
@@ -657,6 +661,9 @@ namespace EnhancedMap.GUI
             UOClientManager.Initialize(Handle);
 
             Logger.Log("main window inizialized.");
+
+            
+            spawnEntrywindow.Show();
         }
 
         public Settings SettingsWindow { get; }
@@ -966,7 +973,11 @@ namespace EnhancedMap.GUI
                 var format = Utility.FormatCoordinates(new Point(MouseManager.Location.X, MouseManager.Location.Y), Global.Maps[Global.Facet], ref xLong, ref yLat, ref xMins, ref yMins, ref xEast, ref ySouth);
 
                 if (format)
+                {
                     MouseManager.LocationXY = string.Format("{0},{1}", (int)MouseManager.Location.X, (int)MouseManager.Location.Y);
+                    spawnEntrywindow.Text = string.Format("Spawn Editor - Currently selected coords: [{0}].", MouseManager.LocationXY);
+                }
+                    
                 if (TopMost && !Global.FreeView && e.Button != MouseButtons.Middle)
                 {
                     _dragging = true;

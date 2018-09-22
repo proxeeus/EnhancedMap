@@ -102,6 +102,12 @@
     <Compile Include="Core\SoundsManager.cs" />
     <Compile Include="Core\UOClientManager.cs" />
     <Compile Include="Core\Configuration.cs" />
+    <Compile Include="GUI\SpawnEntryWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SpawnEntryWindow.Designer.cs">
+      <DependentUpon>SpawnEntryWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Timer.cs" />
     <Compile Include="Core\EventSink.cs" />
     <Compile Include="Core\Global.cs" />
@@ -339,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SharedLabelF.resx">
       <DependentUpon>SharedLabelF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SpawnEntryWindow.resx">
+      <DependentUpon>SpawnEntryWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

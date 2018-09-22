@@ -13,6 +13,9 @@ namespace EnhancedMap.Core
 
         public static bool IsOverAnObject { get; set; }
 
+        /// <summary>
+        /// Gets or sets the current Location (X,Y) clicked on.
+        /// </summary>
         public static string LocationXY { get; set; }
     }
 }
