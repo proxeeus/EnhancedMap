@@ -20,14 +20,15 @@ namespace EnhancedMap.Core
         LABELS,
         SIGNALS,
         MASK,
+        SPAWNERS,
 
         First = BACKGROUND,
-        Last = MASK
+        Last = SPAWNERS
     }
 
     public static class RenderObjectsManager
     {
-        private static readonly List<IRenderObject>[] _objects = new List<IRenderObject>[(int) LAYER_ORDER.Last + 1] {new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>()};
+        private static readonly List<IRenderObject>[] _objects = new List<IRenderObject>[(int) LAYER_ORDER.Last + 1] {new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>(), new List<IRenderObject>() };
 
         static RenderObjectsManager()
         {
@@ -105,6 +106,10 @@ namespace EnhancedMap.Core
             _objects[(int) LAYER_ORDER.MASK].Add(obj);
         }
 
+        public static void AddSpawner(RenderObject obj)
+        {
+            _objects[(int)LAYER_ORDER.SPAWNERS].Add(obj);
+        }
 
         public static void RemoveMap(RenderMap map)
         {

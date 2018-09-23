@@ -29,7 +29,7 @@ namespace EnhancedMap.GUI
         private long _refresh = 9999L;
         private bool _requestRefresh;
         private readonly System.Windows.Forms.Timer _timer;
-
+        private Graphics _graphics;
         private SpawnEntryWindow spawnEntrywindow = new SpawnEntryWindow();
 
         public MainWindow()
@@ -855,6 +855,7 @@ namespace EnhancedMap.GUI
 
         private void ECanvas_Click(object sender, EventArgs e)
         {
+
         }
 
         private void ECanvas_MouseWheel(object sender, MouseEventArgs e)
@@ -865,19 +866,14 @@ namespace EnhancedMap.GUI
 
         private void ECanvas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            /*if (_enhancedCanvas.Dock != DockStyle.Fill)
-            {
-                _enhancedCanvas.Dock = DockStyle.Fill;
-                ChatWindow.TopMost = TopMost = true;
-            }
-            else
-            {
-                _enhancedCanvas.Dock = DockStyle.None;
-                _enhancedCanvas.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
-                _enhancedCanvas.Location = new Point(2, Native.STATUS_BAR_HEIGHT);
-                _enhancedCanvas.Size = new Size(this.ClientRectangle.Width - 4, this.ClientRectangle.Height - Native.STATUS_BAR_HEIGHT - 2);
-                ChatWindow.TopMost = TopMost = false;
-            }*/
+            // Add Spawner handle
+            //var spawner = new SpawnObject("spawnerTest");
+            //var img = Image.FromFile(@"C:\Users\LENOVO\Desktop\Nouveau dossier\src\bin\Debug\Icon\GEM.png");
+            //spawner.Image = img;
+            RenderObjectsManager.AddSpawner(new SpawnObject(Global.PlayerInstance, MouseManager.Location.X, MouseManager.Location.Y));
+            _requestRefresh = true;
+            //RenderObjectsManager.AddSpawner(spawner);
+            //
 
             if (_panel.Dock != DockStyle.Fill)
             {
@@ -892,6 +888,7 @@ namespace EnhancedMap.GUI
                 _panel.Size = new Size(ClientRectangle.Width - 4, ClientRectangle.Height - Native.STATUS_BAR_HEIGHT - 2);
                 ChatWindow.TopMost = TopMost = false;
             }
+            
         }
 
         private void ECanvas_MouseUp(object sender, MouseEventArgs e)
@@ -1002,6 +999,7 @@ namespace EnhancedMap.GUI
 
         private void ECanvas_Paint(object sender, PaintEventArgs e)
         {
+            if(_graphics == null)_graphics = e.Graphics;
             int centerX = _enhancedCanvas.Width / 2;
             int centerY = _enhancedCanvas.Height / 2;
             int w = _enhancedCanvas.Width;

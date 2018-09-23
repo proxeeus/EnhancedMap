@@ -95,6 +95,7 @@
     <Compile Include="Core\MapObjects\MaskObject.cs" />
     <Compile Include="Core\MapObjects\MobileObject.cs" />
     <Compile Include="Core\MapObjects\SharedLabelObject.cs" />
+    <Compile Include="Core\MapObjects\SpawnObject.cs" />
     <Compile Include="Core\MapsManager.cs" />
     <Compile Include="Core\Network\Packets\PacketBase.cs" />
     <Compile Include="Core\Network\Protocol.cs" />
