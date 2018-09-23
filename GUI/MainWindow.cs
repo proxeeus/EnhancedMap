@@ -867,7 +867,6 @@ namespace EnhancedMap.GUI
         private void ECanvas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             // Add Spawner handle
-
             RenderObjectsManager.AddSpawner(new SpawnObject(Global.PlayerInstance, MouseManager.Location.X, MouseManager.Location.Y));
             _requestRefresh = true;
             

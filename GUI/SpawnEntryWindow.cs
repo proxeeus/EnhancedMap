@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnhancedMap.Core.MapObjects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,20 +14,25 @@ namespace EnhancedMap.GUI
 {
     public partial class SpawnEntryWindow : Form
     {
+        public List<SpawnObject> Spawns { get; private set; }
+
+        
+
+
         public SpawnEntryWindow()
         {
             InitializeComponent();
             InitMobileTypes();
+
+            if (Spawns == null) Spawns = new List<SpawnObject>();
         }
 
         private void InitMobileTypes()
         {
             var mobilesPath = @"D:\RunUO.T2A\Scripts\Mobiles";
             var mobilesDirectory = new DirectoryInfo(mobilesPath);
-            
 
-                ListDirectory(mobilesTreeView, mobilesPath);
-
+            ListDirectory(mobilesTreeView, mobilesPath);
         }
 
         private void ListDirectory(TreeView treeView, string path)
@@ -44,6 +50,14 @@ namespace EnhancedMap.GUI
             foreach (var file in directoryInfo.GetFiles())
                 directoryNode.Nodes.Add(new TreeNode(Path.GetFileNameWithoutExtension(file.Name)));
             return directoryNode;
+        }
+
+        private void mobilesTreeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            var clickedNode = e.Node;
+            if (clickedNode.Nodes.Count > 0) return;
+
+            spawnMobilesListBox.Items.Add(clickedNode.Text);
         }
     }
 }
