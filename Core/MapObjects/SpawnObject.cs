@@ -11,6 +11,8 @@ namespace EnhancedMap.Core.MapObjects
         public Image Image { get; set; }
         private static readonly Pen _pen = new Pen(Color.White) { DashStyle = DashStyle.Dot, DashPattern = new float[] { 9, 4, 3, 4, 3, 4 } };
         public UserObject Parent { get; }
+        public bool IsMouseOver { get; private set; }
+        private readonly LabelObject _label = new LabelObject { Background = ColorsCache["transparent"], Hue = ColorsCache["stamina"] };
 
         public SpawnObject(string name) : base(name)
         {
@@ -54,6 +56,27 @@ namespace EnhancedMap.Core.MapObjects
             g.ResetTransform();
 
             g.DrawImage(Image, relativeX - Image.Width / 2, relativeY - Image.Height, Image.Width, Image.Height);
+
+            int wx = Image.Width / 2;
+            int wy = Image.Height / 2;
+
+            if (MouseManager.Location.X >= Position.X - wx && MouseManager.Location.X <= Position.X + wx && MouseManager.Location.Y >= Position.Y - wy && MouseManager.Location.Y <= Position.Y + wy && MouseManager.IsEnter)
+            {
+                if (!IsMouseOver)
+                    IsMouseOver = true;
+                if (!_label.IsVisible)
+                {
+                    _label.IsVisible = true;
+                    _label.UpdatePosition(MouseManager.Location.X, MouseManager.Location.Y);
+                    _label.Text = "Spawner";
+                }
+
+                _label.Render(g, x, y, canvasW, canvasH);
+                return true;
+            }
+
+            if (IsMouseOver)
+                IsMouseOver = false;
 
             return false;
         }

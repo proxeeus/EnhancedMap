@@ -867,27 +867,9 @@ namespace EnhancedMap.GUI
         private void ECanvas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             // Add Spawner handle
-            //var spawner = new SpawnObject("spawnerTest");
-            //var img = Image.FromFile(@"C:\Users\LENOVO\Desktop\Nouveau dossier\src\bin\Debug\Icon\GEM.png");
-            //spawner.Image = img;
+
             RenderObjectsManager.AddSpawner(new SpawnObject(Global.PlayerInstance, MouseManager.Location.X, MouseManager.Location.Y));
             _requestRefresh = true;
-            //RenderObjectsManager.AddSpawner(spawner);
-            //
-
-            if (_panel.Dock != DockStyle.Fill)
-            {
-                _panel.Dock = DockStyle.Fill;
-                ChatWindow.TopMost = TopMost = true;
-            }
-            else
-            {
-                _panel.Dock = DockStyle.None;
-                _panel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
-                _panel.Location = new Point(2, Native.STATUS_BAR_HEIGHT);
-                _panel.Size = new Size(ClientRectangle.Width - 4, ClientRectangle.Height - Native.STATUS_BAR_HEIGHT - 2);
-                ChatWindow.TopMost = TopMost = false;
-            }
             
         }
 
