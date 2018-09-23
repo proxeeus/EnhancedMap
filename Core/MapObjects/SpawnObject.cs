@@ -16,14 +16,25 @@ namespace EnhancedMap.Core.MapObjects
 
         public bool HasFocus { get; private set; }
 
+        public int NPCCount { get; set; }
+        public int HomeRange { get; set; }
+        public bool TotalRespawn { get; set; }
+        public string MinTime { get; set; }
+        public string MaxTime { get; set; }
+        public int Team { get; set; }
+        public string SpawnerName { get; set; }
+        public List<string> Mobiles { get; set; }
+
         public SpawnObject(UserObject parent, int x, int y) : base("marker")
         {
             Parent = parent;
             UpdatePosition(x, y);
 
+            /// TODO: unhardcode this
             Image = new Bitmap(Image.FromFile(@"C:\Users\LENOVO\Desktop\Nouveau dossier\src\bin\Debug\Icon\GEM.png"), 16, 16);
         }
 
+        #region Rendering
         public override bool Render(Graphics g, int x, int y, int canvasW, int canvasH)
         {
             if (Parent == null || Parent.IsDisposing)
@@ -43,7 +54,6 @@ namespace EnhancedMap.Core.MapObjects
 
             relativeX = gameX + x;
             relativeY = gameY + y;
-
 
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.ResetTransform();
@@ -79,8 +89,8 @@ namespace EnhancedMap.Core.MapObjects
                 HasFocus = false;
             }
                 
-
             return false;
         }
+        #endregion
     }
 }
