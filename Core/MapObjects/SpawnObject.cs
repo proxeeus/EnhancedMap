@@ -14,9 +14,7 @@ namespace EnhancedMap.Core.MapObjects
         public bool IsMouseOver { get; private set; }
         private readonly LabelObject _label = new LabelObject { Background = ColorsCache["transparent"], Hue = ColorsCache["stamina"] };
 
-        public SpawnObject(string name) : base(name)
-        {
-        }
+        public bool HasFocus { get; private set; }
 
         public SpawnObject(UserObject parent, int x, int y) : base("marker")
         {
@@ -47,11 +45,6 @@ namespace EnhancedMap.Core.MapObjects
             relativeY = gameY + y;
 
 
-            int playerX = Global.PlayerInstance.RelativePosition.X;
-            int playerY = Global.PlayerInstance.RelativePosition.Y;
-
-            (playerX, playerY) = Geometry.RotatePoint(playerX, playerY, Global.Zoom, 1, Global.Angle);
-
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.ResetTransform();
 
@@ -63,12 +56,17 @@ namespace EnhancedMap.Core.MapObjects
             if (MouseManager.Location.X >= Position.X - wx && MouseManager.Location.X <= Position.X + wx && MouseManager.Location.Y >= Position.Y - wy && MouseManager.Location.Y <= Position.Y + wy && MouseManager.IsEnter)
             {
                 if (!IsMouseOver)
+                {
                     IsMouseOver = true;
+                    HasFocus = true;
+                }
+                    
                 if (!_label.IsVisible)
                 {
                     _label.IsVisible = true;
                     _label.UpdatePosition(MouseManager.Location.X, MouseManager.Location.Y);
                     _label.Text = "Spawner";
+
                 }
 
                 _label.Render(g, x, y, canvasW, canvasH);
@@ -76,7 +74,11 @@ namespace EnhancedMap.Core.MapObjects
             }
 
             if (IsMouseOver)
+            {
                 IsMouseOver = false;
+                HasFocus = false;
+            }
+                
 
             return false;
         }
