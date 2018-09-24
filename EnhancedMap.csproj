@@ -101,6 +101,7 @@
     <Compile Include="Core\Network\Protocol.cs" />
     <Compile Include="Core\Network\SocketClient.cs" />
     <Compile Include="Core\SoundsManager.cs" />
+    <Compile Include="Core\SpawnDefinition.cs" />
     <Compile Include="Core\UOClientManager.cs" />
     <Compile Include="Core\Configuration.cs" />
     <Compile Include="GUI\SpawnEntryWindow.cs">

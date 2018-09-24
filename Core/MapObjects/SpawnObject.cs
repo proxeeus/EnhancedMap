@@ -24,11 +24,21 @@ namespace EnhancedMap.Core.MapObjects
         public int Team { get; set; }
         public string SpawnerName { get; set; }
         public List<string> Mobiles { get; set; }
-
-        public SpawnObject(UserObject parent, int x, int y) : base("marker")
+        
+        public SpawnObject(UserObject parent, int x, int y, SpawnDefinition spawnDefinition) : base("marker")
         {
             Parent = parent;
             UpdatePosition(x, y);
+
+
+            NPCCount = Convert.ToInt32(spawnDefinition.NPCCount);
+            HomeRange = Convert.ToInt32(spawnDefinition.HomeRange);
+            TotalRespawn = spawnDefinition.TotalRespawn;
+            MinTime = spawnDefinition.MinTime;
+            MaxTime = spawnDefinition.MaxTime;
+            Team = Convert.ToInt32(spawnDefinition.Team);
+            SpawnerName = spawnDefinition.SpawnerName;
+            Mobiles = spawnDefinition.Mobiles;
 
             /// TODO: unhardcode this
             Image = new Bitmap(Image.FromFile(@"C:\Users\LENOVO\Desktop\Nouveau dossier\src\bin\Debug\Icon\GEM.png"), 16, 16);

@@ -1,4 +1,5 @@
-﻿using EnhancedMap.Core.MapObjects;
+﻿using EnhancedMap.Core;
+using EnhancedMap.Core.MapObjects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,17 +15,47 @@ namespace EnhancedMap.GUI
 {
     public partial class SpawnEntryWindow : Form
     {
-        public List<SpawnObject> Spawns { get; private set; }
+        public BindingList<SpawnObject> Spawns { get; private set; }
 
-        
+        public SpawnDefinition GetGUISpawnDefinition()
+        {
+            var spawnDefinition = new SpawnDefinition();
 
+            spawnDefinition.HomeRange = this.homeRangeTextBox.Text;
+            spawnDefinition.MaxTime = this.maxTimeTextBox.Text;
+            spawnDefinition.MinTime = this.minTimeTextBox.Text;
+            spawnDefinition.NPCCount = this.npcCountTextBox.Text;
+            spawnDefinition.SpawnerName = this.spawnNameTextBox.Text;
+            spawnDefinition.Team = this.teamTextBox.Text;
+            
+            foreach (var mobile in spawnMobilesListBox.Items) { spawnDefinition.Mobiles.Add(mobile.ToString()); }
+
+            return spawnDefinition;
+        }
+
+        public void AddNewSpawnEntry(SpawnObject spawner)
+        {
+            Spawns.Add(spawner);
+
+            RefreshUI();
+        }
+
+        public void RefreshUI()
+        {
+
+            allSpawnsListBox.Refresh();
+            allSpawnsListBox.Update();
+        }
 
         public SpawnEntryWindow()
         {
             InitializeComponent();
             InitMobileTypes();
+            Spawns = new BindingList<SpawnObject>();
+            allSpawnsListBox.DataSource = Spawns;
+            allSpawnsListBox.DisplayMember = "SpawnerName";
 
-            if (Spawns == null) Spawns = new List<SpawnObject>();
+            if (Spawns == null) Spawns = new BindingList<SpawnObject>();
         }
 
         private void InitMobileTypes()
@@ -58,6 +89,11 @@ namespace EnhancedMap.GUI
             if (clickedNode.Nodes.Count > 0) return;
 
             spawnMobilesListBox.Items.Add(clickedNode.Text);
+        }
+
+        private void addMobileTypeButton_Click(object sender, EventArgs e)
+        {
+            spawnMobilesListBox.Items.Add(mobileTypeNameTextBox.Text);
         }
     }
 }

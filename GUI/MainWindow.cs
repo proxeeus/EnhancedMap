@@ -30,14 +30,14 @@ namespace EnhancedMap.GUI
         private bool _requestRefresh;
         private readonly System.Windows.Forms.Timer _timer;
         private Graphics _graphics;
-        private SpawnEntryWindow spawnEntrywindow = new SpawnEntryWindow();
+        private SpawnEntryWindow _spawnEntrywindow = new SpawnEntryWindow();
 
         public MainWindow()
         {
             InitializeComponent();
-            spawnEntrywindow.StartPosition = FormStartPosition.Manual;
-            spawnEntrywindow.Left = 800;
-            spawnEntrywindow.Top = 1;
+            _spawnEntrywindow.StartPosition = FormStartPosition.Manual;
+            _spawnEntrywindow.Left = 800;
+            _spawnEntrywindow.Top = 1;
             Global.MainWindow = this;
 
             MaximumSize = new Size(1200, 1200);
@@ -663,7 +663,7 @@ namespace EnhancedMap.GUI
             Logger.Log("main window inizialized.");
 
             
-            spawnEntrywindow.Show();
+            _spawnEntrywindow.Show();
         }
 
         public Settings SettingsWindow { get; }
@@ -867,7 +867,12 @@ namespace EnhancedMap.GUI
         private void ECanvas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             // Add Spawner handle
-            RenderObjectsManager.AddSpawner(new SpawnObject(Global.PlayerInstance, MouseManager.Location.X, MouseManager.Location.Y));
+            var spawnEntryData = _spawnEntrywindow.GetGUISpawnDefinition();
+            spawnEntryData.X = MouseManager.Location.X.ToString();
+            spawnEntryData.Y = MouseManager.Location.Y.ToString();
+            var spawnObject = new SpawnObject(Global.PlayerInstance, MouseManager.Location.X, MouseManager.Location.Y, spawnEntryData);
+            RenderObjectsManager.AddSpawner(spawnObject);
+            _spawnEntrywindow.AddNewSpawnEntry(spawnObject);
             _requestRefresh = true;
             
         }
@@ -953,7 +958,7 @@ namespace EnhancedMap.GUI
                 if (format)
                 {
                     MouseManager.LocationXY = string.Format("{0},{1}", (int)MouseManager.Location.X, (int)MouseManager.Location.Y);
-                    spawnEntrywindow.Text = string.Format("Spawn Editor - Currently selected coords: [{0}].", MouseManager.LocationXY);
+                    _spawnEntrywindow.Text = string.Format("Spawn Editor - Currently selected coords: [{0}].", MouseManager.LocationXY);
                 }
                     
                 if (TopMost && !Global.FreeView && e.Button != MouseButtons.Middle)
@@ -1105,9 +1110,9 @@ namespace EnhancedMap.GUI
                         if (c == "\0")
                             break;
 
-                        if (!ChatWindow.Visible) ChatWindow.Visible = true;
+                        //if (!ChatWindow.Visible) ChatWindow.Visible = true;
 
-                        ChatWindow.AppendText(c);
+                        //ChatWindow.AppendText(c);
                     }
                 }
                     break;
