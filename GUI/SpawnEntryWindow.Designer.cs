@@ -248,10 +248,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 553);
+            this.ClientSize = new System.Drawing.Size(619, 433);
             this.Controls.Add(this.allSpawnsListBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.mobilesTreeView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SpawnEntryWindow";
             this.Text = "Spawn Editor";
             this.groupBox1.ResumeLayout(false);

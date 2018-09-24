@@ -42,7 +42,6 @@ namespace EnhancedMap.GUI
 
         public void RefreshUI()
         {
-
             allSpawnsListBox.Refresh();
             allSpawnsListBox.Update();
         }
