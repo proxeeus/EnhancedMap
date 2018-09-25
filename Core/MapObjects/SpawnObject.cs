@@ -16,6 +16,7 @@ namespace EnhancedMap.Core.MapObjects
 
         public bool HasFocus { get; private set; }
 
+        public Guid Id { get; set; }
         public int NPCCount { get; set; }
         public int HomeRange { get; set; }
         public bool TotalRespawn { get; set; }
@@ -24,13 +25,15 @@ namespace EnhancedMap.Core.MapObjects
         public int Team { get; set; }
         public string SpawnerName { get; set; }
         public List<string> Mobiles { get; set; }
+        public string MapId { get; set; }
+        public string FacetId { get; set; }
         
         public SpawnObject(UserObject parent, int x, int y, SpawnDefinition spawnDefinition) : base("marker")
         {
             Parent = parent;
             UpdatePosition(x, y);
 
-
+            Id = Guid.NewGuid();
             NPCCount = Convert.ToInt32(spawnDefinition.NPCCount);
             HomeRange = Convert.ToInt32(spawnDefinition.HomeRange);
             TotalRespawn = spawnDefinition.TotalRespawn;
@@ -102,5 +105,11 @@ namespace EnhancedMap.Core.MapObjects
             return false;
         }
         #endregion
+
+        public override string ToString()
+        {
+            return this.SpawnerName + " [" + this.Position.X + ", " + this.Position.Y + "]";
+        }
     }
+
 }

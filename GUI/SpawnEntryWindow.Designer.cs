@@ -243,6 +243,8 @@
             this.allSpawnsListBox.Name = "allSpawnsListBox";
             this.allSpawnsListBox.Size = new System.Drawing.Size(120, 407);
             this.allSpawnsListBox.TabIndex = 20;
+            this.allSpawnsListBox.SelectedIndexChanged += new System.EventHandler(this.allSpawnsListBox_SelectedIndexChanged);
+            this.allSpawnsListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.allSpawnsListBox_MouseDoubleClick);
             // 
             // SpawnEntryWindow
             // 

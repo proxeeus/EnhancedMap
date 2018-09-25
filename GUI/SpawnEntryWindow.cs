@@ -17,6 +17,8 @@ namespace EnhancedMap.GUI
     {
         public BindingList<SpawnObject> Spawns { get; private set; }
 
+        public SpawnObject SelectedSpawn { get; private set; }
+
         public SpawnDefinition GetGUISpawnDefinition()
         {
             var spawnDefinition = new SpawnDefinition();
@@ -52,7 +54,7 @@ namespace EnhancedMap.GUI
             InitMobileTypes();
             Spawns = new BindingList<SpawnObject>();
             allSpawnsListBox.DataSource = Spawns;
-            allSpawnsListBox.DisplayMember = "SpawnerName";
+            
 
             if (Spawns == null) Spawns = new BindingList<SpawnObject>();
         }
@@ -93,6 +95,27 @@ namespace EnhancedMap.GUI
         private void addMobileTypeButton_Click(object sender, EventArgs e)
         {
             spawnMobilesListBox.Items.Add(mobileTypeNameTextBox.Text);
+        }
+
+        private void allSpawnsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedSpawner = ((ListBox)sender).SelectedItem as SpawnObject ;
+            SelectedSpawn = selectedSpawner;
+
+        }
+
+        private void allSpawnsListBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int index = this.allSpawnsListBox.IndexFromPoint(e.Location);
+            if (index != System.Windows.Forms.ListBox.NoMatches)
+            {
+                var selectedSpawner = ((ListBox)sender).SelectedItem as SpawnObject;
+                SelectedSpawn = selectedSpawner;
+
+                Global.X = SelectedSpawn.Position.X;
+                Global.Y = SelectedSpawn.Position.Y;
+            }
+
         }
     }
 }
