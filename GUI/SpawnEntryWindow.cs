@@ -102,6 +102,19 @@ namespace EnhancedMap.GUI
             var selectedSpawner = ((ListBox)sender).SelectedItem as SpawnObject ;
             SelectedSpawn = selectedSpawner;
 
+            UpdateUI(SelectedSpawn);
+        }
+
+        private void UpdateUI(SpawnObject spawnerData)
+        {
+            spawnNameTextBox.Text = spawnerData.SpawnerName;
+            npcCountTextBox.Text = spawnerData.NPCCount.ToString();
+            minTimeTextBox.Text = spawnerData.MinTime.ToString();
+            maxTimeTextBox.Text = spawnerData.MaxTime.ToString();
+            teamTextBox.Text = spawnerData.Team.ToString();
+            homeRangeTextBox.Text = spawnerData.HomeRange.ToString();
+
+            spawnMobilesListBox.DataSource = spawnerData.Mobiles;
         }
 
         private void allSpawnsListBox_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -111,7 +124,7 @@ namespace EnhancedMap.GUI
             {
                 var selectedSpawner = ((ListBox)sender).SelectedItem as SpawnObject;
                 SelectedSpawn = selectedSpawner;
-
+                UpdateUI(SelectedSpawn);
                 Global.X = SelectedSpawn.Position.X;
                 Global.Y = SelectedSpawn.Position.Y;
             }
@@ -127,7 +140,12 @@ namespace EnhancedMap.GUI
             {
                 var spawnReader = new SpawnReader();
                 spawnReader.MapFileName = dialog.FileName;
-                spawnReader.LoadSpawns();
+                var spawns = spawnReader.LoadSpawns();
+
+                foreach(var spawn in spawns)
+                {
+                    AddNewSpawnEntry(spawn);
+                }
             }
         }
     }

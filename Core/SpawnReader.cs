@@ -1,6 +1,7 @@
 ﻿using EnhancedMap.Core.MapObjects;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,9 @@ namespace EnhancedMap.Core
     {
         public string MapFileName { get; set; }
 
-        public void LoadSpawns()
+        public BindingList<SpawnObject> LoadSpawns()
         {
-            var spawnObjects = new List<SpawnObject>();
+            var spawnObjects = new BindingList<SpawnObject>();
 
             using (var streamReader = new StreamReader(MapFileName))
             {
@@ -71,6 +72,8 @@ namespace EnhancedMap.Core
             {
                 RenderObjectsManager.AddSpawner(spawn);
             }
+
+            return spawnObjects;
         }
     }
 }
