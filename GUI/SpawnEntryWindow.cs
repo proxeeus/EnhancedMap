@@ -39,7 +39,7 @@ namespace EnhancedMap.GUI
         {
             Spawns.Add(spawner);
 
-            RefreshUI();
+            //RefreshUI();
         }
 
         public void RefreshUI()
@@ -142,10 +142,14 @@ namespace EnhancedMap.GUI
                 spawnReader.MapFileName = dialog.FileName;
                 var spawns = spawnReader.LoadSpawns();
 
-                foreach(var spawn in spawns)
+                allSpawnsListBox.DataSource = spawns;
+
+                foreach (var spawn in spawns)
                 {
-                    AddNewSpawnEntry(spawn);
+                    RenderObjectsManager.AddSpawner(spawn);
                 }
+
+                RefreshUI();
             }
         }
     }

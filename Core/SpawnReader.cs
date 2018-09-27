@@ -68,11 +68,6 @@ namespace EnhancedMap.Core
                 }
             }
 
-            foreach(var spawn in spawnObjects)
-            {
-                RenderObjectsManager.AddSpawner(spawn);
-            }
-
             return spawnObjects;
         }
     }
