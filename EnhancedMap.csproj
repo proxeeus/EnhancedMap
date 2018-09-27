@@ -358,6 +358,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.manifest" />
+    <None Include="Core\SpawnData\vendors_Grimoric_T2A.map" />
     <None Include="libs\MapWindow.lua" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
