@@ -117,5 +117,18 @@ namespace EnhancedMap.GUI
             }
 
         }
+
+        private void loadSpawnButton_Click(object sender, EventArgs e)
+        {
+            var dialog = new OpenFileDialog();
+            dialog.Filter = dialog.Filter = "Map files (*.map)|*.map";
+            var result = dialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                var spawnReader = new SpawnReader();
+                spawnReader.MapFileName = dialog.FileName;
+                spawnReader.LoadSpawns();
+            }
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace EnhancedMap.Core
         public List<string> Mobiles { get; set; }
         public string X { get; set; }
         public string Y { get; set; }
+        public string MapId { get; set; }
        
         public SpawnDefinition() { Mobiles = new List<string>(); }
     }
