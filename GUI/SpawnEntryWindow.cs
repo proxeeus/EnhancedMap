@@ -144,7 +144,8 @@ namespace EnhancedMap.GUI
                 spawnReader.MapFileName = dialog.FileName;
                 var spawns = spawnReader.LoadSpawns();
 
-                allSpawnsListBox.DataSource = spawns;
+                Spawns = spawns;
+                allSpawnsListBox.DataSource = Spawns;
 
                 foreach (var spawn in spawns)
                 {
@@ -152,6 +153,18 @@ namespace EnhancedMap.GUI
                 }
 
                 RefreshUI();
+            }
+        }
+
+        private void saveSpawnButton_Click(object sender, EventArgs e)
+        {
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = saveFileDialog.Filter = "Map files (*.map)|*.map";
+            var result = saveFileDialog.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                var writer = new SpawnWriter(Spawns);
+                writer.Save(saveFileDialog.FileName);
             }
         }
     }

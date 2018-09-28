@@ -47,9 +47,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.spawnNameTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.uniqueSpawnCheckBox = new System.Windows.Forms.CheckBox();
             this.allSpawnsListBox = new System.Windows.Forms.ListBox();
             this.loadSpawnButton = new System.Windows.Forms.Button();
-            this.uniqueSpawnCheckBox = new System.Windows.Forms.CheckBox();
+            this.saveSpawnButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -239,6 +240,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spawn Entry";
             // 
+            // uniqueSpawnCheckBox
+            // 
+            this.uniqueSpawnCheckBox.AutoSize = true;
+            this.uniqueSpawnCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.uniqueSpawnCheckBox.Location = new System.Drawing.Point(134, 179);
+            this.uniqueSpawnCheckBox.Name = "uniqueSpawnCheckBox";
+            this.uniqueSpawnCheckBox.Size = new System.Drawing.Size(94, 17);
+            this.uniqueSpawnCheckBox.TabIndex = 19;
+            this.uniqueSpawnCheckBox.Text = "Unique spawn";
+            this.uniqueSpawnCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.uniqueSpawnCheckBox.UseVisualStyleBackColor = true;
+            // 
             // allSpawnsListBox
             // 
             this.allSpawnsListBox.FormattingEnabled = true;
@@ -259,23 +272,22 @@
             this.loadSpawnButton.UseVisualStyleBackColor = true;
             this.loadSpawnButton.Click += new System.EventHandler(this.loadSpawnButton_Click);
             // 
-            // uniqueSpawnCheckBox
+            // saveSpawnButton
             // 
-            this.uniqueSpawnCheckBox.AutoSize = true;
-            this.uniqueSpawnCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.uniqueSpawnCheckBox.Location = new System.Drawing.Point(134, 179);
-            this.uniqueSpawnCheckBox.Name = "uniqueSpawnCheckBox";
-            this.uniqueSpawnCheckBox.Size = new System.Drawing.Size(94, 17);
-            this.uniqueSpawnCheckBox.TabIndex = 19;
-            this.uniqueSpawnCheckBox.Text = "Unique spawn";
-            this.uniqueSpawnCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.uniqueSpawnCheckBox.UseVisualStyleBackColor = true;
+            this.saveSpawnButton.Location = new System.Drawing.Point(12, 491);
+            this.saveSpawnButton.Name = "saveSpawnButton";
+            this.saveSpawnButton.Size = new System.Drawing.Size(642, 23);
+            this.saveSpawnButton.TabIndex = 22;
+            this.saveSpawnButton.Text = "Save Spawn File";
+            this.saveSpawnButton.UseVisualStyleBackColor = true;
+            this.saveSpawnButton.Click += new System.EventHandler(this.saveSpawnButton_Click);
             // 
             // SpawnEntryWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 502);
+            this.ClientSize = new System.Drawing.Size(658, 526);
+            this.Controls.Add(this.saveSpawnButton);
             this.Controls.Add(this.loadSpawnButton);
             this.Controls.Add(this.allSpawnsListBox);
             this.Controls.Add(this.groupBox1);
@@ -313,5 +325,6 @@
         private System.Windows.Forms.ListBox allSpawnsListBox;
         private System.Windows.Forms.Button loadSpawnButton;
         private System.Windows.Forms.CheckBox uniqueSpawnCheckBox;
+        private System.Windows.Forms.Button saveSpawnButton;
     }
 }

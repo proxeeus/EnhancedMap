@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Text;
 using EnhancedMap.Properties;
 
 namespace EnhancedMap.Core.MapObjects
@@ -111,6 +112,39 @@ namespace EnhancedMap.Core.MapObjects
         public override string ToString()
         {
             return this.SpawnerName + " [" + this.Position.X + ", " + this.Position.Y + "]";
+        }
+
+        public string ToText()
+        {
+            var line = string.Empty;
+
+            // Basic format
+            // +name [MobileTypeA, MobileTypeB, etc]: X Y MapID NPCCount HomeRange BringToHome MinTime MaxTime Team Description
+            // "," can also be "|" depending on spawn being unique or not
+
+            var template = @"+{0} [{1}]: {2} {3} {4} {5} {6} {7} {8} {9} {10}";
+
+            var mobBuilder = new StringBuilder();
+            var separator = string.Empty;
+            if (UniqueSpawn)
+                separator = ", ";
+            else
+                separator = "| ";
+            var mobIndex = 1;
+            for(var i = 0; i < Mobiles.Count; i++)
+            {
+                mobBuilder.Append(Mobiles[i]);
+                if (mobIndex < Mobiles.Count)
+                {
+                    mobBuilder.Append(separator);
+                    mobIndex++;
+                }  
+            }
+
+            line = string.Format(template, SpawnerName.ToLower(),
+                mobBuilder.ToString(), Position.X, Position.Y, Global.PlayerInstance.Map, NPCCount, HomeRange, BringToHome, MinTime, MaxTime, Team);
+
+            return line;
         }
     }
 
