@@ -11,7 +11,7 @@ namespace EnhancedMap.Core
       
         public string NPCCount { get; set; }
         public string HomeRange { get; set; }
-        public bool TotalRespawn { get; set; }
+        public bool BringToHome { get; set; }
         public string MinTime { get; set; }
         public string MaxTime { get; set; }
         public string Team { get; set; }

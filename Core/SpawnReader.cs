@@ -56,7 +56,7 @@ namespace EnhancedMap.Core
                     spawnDef.MapId = split[2];
                     spawnDef.NPCCount = split[3];
                     spawnDef.HomeRange = split[4];
-                    spawnDef.TotalRespawn = Convert.ToBoolean(split[5]);
+                    spawnDef.BringToHome = Convert.ToBoolean(split[5]);
                     spawnDef.MinTime = split[6];
                     spawnDef.MaxTime = split[7];
                     spawnDef.Team = split[8];

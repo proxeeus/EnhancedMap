@@ -19,7 +19,7 @@ namespace EnhancedMap.Core.MapObjects
         public Guid Id { get; set; }
         public int NPCCount { get; set; }
         public int HomeRange { get; set; }
-        public bool TotalRespawn { get; set; }
+        public bool BringToHome { get; set; }
         public string MinTime { get; set; }
         public string MaxTime { get; set; }
         public int Team { get; set; }
@@ -36,7 +36,7 @@ namespace EnhancedMap.Core.MapObjects
             Id = Guid.NewGuid();
             NPCCount = Convert.ToInt32(spawnDefinition.NPCCount);
             HomeRange = Convert.ToInt32(spawnDefinition.HomeRange);
-            TotalRespawn = spawnDefinition.TotalRespawn;
+            BringToHome = spawnDefinition.BringToHome;
             MinTime = spawnDefinition.MinTime;
             MaxTime = spawnDefinition.MaxTime;
             Team = Convert.ToInt32(spawnDefinition.Team);

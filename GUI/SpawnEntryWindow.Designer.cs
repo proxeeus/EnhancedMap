@@ -39,7 +39,7 @@
             this.minTimeTextBox = new System.Windows.Forms.TextBox();
             this.maxTimeTextBox = new System.Windows.Forms.TextBox();
             this.teamTextBox = new System.Windows.Forms.TextBox();
-            this.totalRespawnCheckBox = new System.Windows.Forms.CheckBox();
+            this.bringToHomeCheckBox = new System.Windows.Forms.CheckBox();
             this.mobileTypeNameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.spawnMobilesListBox = new System.Windows.Forms.ListBox();
@@ -146,19 +146,19 @@
             this.teamTextBox.TabIndex = 12;
             this.teamTextBox.Text = "0";
             // 
-            // totalRespawnCheckBox
+            // bringToHomeCheckBox
             // 
-            this.totalRespawnCheckBox.AutoSize = true;
-            this.totalRespawnCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.totalRespawnCheckBox.Checked = true;
-            this.totalRespawnCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.totalRespawnCheckBox.Location = new System.Drawing.Point(134, 156);
-            this.totalRespawnCheckBox.Name = "totalRespawnCheckBox";
-            this.totalRespawnCheckBox.Size = new System.Drawing.Size(93, 17);
-            this.totalRespawnCheckBox.TabIndex = 13;
-            this.totalRespawnCheckBox.Text = "Total respawn";
-            this.totalRespawnCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.totalRespawnCheckBox.UseVisualStyleBackColor = true;
+            this.bringToHomeCheckBox.AutoSize = true;
+            this.bringToHomeCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bringToHomeCheckBox.Checked = true;
+            this.bringToHomeCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.bringToHomeCheckBox.Location = new System.Drawing.Point(134, 156);
+            this.bringToHomeCheckBox.Name = "bringToHomeCheckBox";
+            this.bringToHomeCheckBox.Size = new System.Drawing.Size(93, 17);
+            this.bringToHomeCheckBox.TabIndex = 13;
+            this.bringToHomeCheckBox.Text = "Bring to Home";
+            this.bringToHomeCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bringToHomeCheckBox.UseVisualStyleBackColor = true;
             // 
             // mobileTypeNameTextBox
             // 
@@ -225,7 +225,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.npcCountTextBox);
-            this.groupBox1.Controls.Add(this.totalRespawnCheckBox);
+            this.groupBox1.Controls.Add(this.bringToHomeCheckBox);
             this.groupBox1.Controls.Add(this.homeRangeTextBox);
             this.groupBox1.Controls.Add(this.teamTextBox);
             this.groupBox1.Controls.Add(this.minTimeTextBox);
@@ -288,7 +288,7 @@
         private System.Windows.Forms.TextBox minTimeTextBox;
         private System.Windows.Forms.TextBox maxTimeTextBox;
         private System.Windows.Forms.TextBox teamTextBox;
-        private System.Windows.Forms.CheckBox totalRespawnCheckBox;
+        private System.Windows.Forms.CheckBox bringToHomeCheckBox;
         private System.Windows.Forms.TextBox mobileTypeNameTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox spawnMobilesListBox;
