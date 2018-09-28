@@ -22,12 +22,17 @@ namespace Server
 		[Description( "Dev version of the dynamic spawn tool." )]
 		private static void Generate_OnCommand( CommandEventArgs e )
 		{
-			Parse( e.Mobile );
+			if( e.Length == 0 )
+			{
+				e.Mobile.SendMessage("You need to provide a valid .map name.");
+				return;
+			}
+			Parse( e.Mobile, e.GetString( 0 ).ToLower() );
 		}
 
-		public static void Parse( Mobile from )
+		public static void Parse( Mobile from, string spawnFile )
 		{
-			string vendor_path = Path.Combine( Core.BaseDirectory, "Data/regs.map" );
+			string vendor_path = Path.Combine( Core.BaseDirectory, string.Format("Data/{0}.map", spawnFile) );
 			m_Count = 0;
 
 			if ( File.Exists( vendor_path ) )
@@ -62,10 +67,9 @@ namespace Server
 						var uniqueSpawn = true;
 						if( mobSplit.Length == 1 && mobSplit[0].Contains("|"))
 						{
-							Console.WriteLine("mobsplit est null donc on retente un split |");
 							mobSplit = mobs.Split('|');
 							if(mobSplit != null)
-								uniqueSpawn = false; Console.WriteLine("on a bien splitté avec |");
+								uniqueSpawn = false;
 						}
 
 						var mobsList = new List<string>();
@@ -86,7 +90,7 @@ namespace Server
 			}
 		}
 
-		public static void PlaceNPC( string sx, string sy, string sm, List<string> types, string NPCCount, string HomeRange, string bringToHome, double MinTime, double MaxTime, string Team, bool UniqueSpawn )
+		public static void PlaceNPC( string sx, string sy, string sm, List<string> types, string NPCCount, string HomeRange, string BringToHome, double MinTime, double MaxTime, string Team, bool UniqueSpawn )
 		{
 			if ( types.Count == 0 )
 				return;
@@ -96,7 +100,7 @@ namespace Server
 			int map = Utility.ToInt32( sm );
 			int npcCount = Utility.ToInt32( NPCCount );
 			int homeRange = Utility.ToInt32( HomeRange );
-			bool bringToHome = Convert.ToBoolean( bringToHome );
+			bool bringToHome = Convert.ToBoolean( BringToHome );
 			TimeSpan minTime = TimeSpan.FromMinutes( MinTime );
 			TimeSpan maxTime = TimeSpan.FromMinutes ( MaxTime );
 			int team = Utility.ToInt32( Team );
@@ -150,6 +154,7 @@ namespace Server
 				{
 					sp.BringToHome();
 				}
+				++m_Count;
 			}
 			else
 			{

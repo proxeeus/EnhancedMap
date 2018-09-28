@@ -29,6 +29,9 @@ namespace EnhancedMap.GUI
             spawnDefinition.NPCCount = this.npcCountTextBox.Text;
             spawnDefinition.SpawnerName = this.spawnNameTextBox.Text;
             spawnDefinition.Team = this.teamTextBox.Text;
+            spawnDefinition.MapId = Global.PlayerInstance.Map.ToString();
+            spawnDefinition.UniqueSpawn = uniqueSpawnCheckBox.Checked;
+            spawnDefinition.BringToHome = bringToHomeCheckBox.Checked;
             
             foreach (var mobile in spawnMobilesListBox.Items) { spawnDefinition.Mobiles.Add(mobile.ToString()); }
 
