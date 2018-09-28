@@ -38,10 +38,21 @@ namespace EnhancedMap.Core
 
                     var sub = line.Substring(++indexOf).Trim();
                     var spawnName = line.Substring(++spawnIndexOf, mobIndexOf - spawnIndexOf);
-                    // Add split [] for mobiles here?
+
                     var mobs = line.Substring(++mobIndexOf, mobLastIndexOf - mobIndexOf);
                     var split = sub.Split(' ');
                     var mobSplit = mobs.Split(',');
+
+                    var uniqueSpawn = true;
+                    if (mobSplit.Length == 1 && mobSplit[0].Contains("|"))
+                    {
+                        mobSplit = mobs.Split('|');
+                        if (mobSplit != null)
+                        {
+                            uniqueSpawn = false;
+                        }  
+                    }
+                    spawnDef.UniqueSpawn = uniqueSpawn;
 
                     var mobsList = new List<string>();
                     foreach (var mob in mobSplit)

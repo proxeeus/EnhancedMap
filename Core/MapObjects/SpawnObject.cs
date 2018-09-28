@@ -25,6 +25,7 @@ namespace EnhancedMap.Core.MapObjects
         public int Team { get; set; }
         public string SpawnerName { get; set; }
         public List<string> Mobiles { get; set; }
+        public bool UniqueSpawn { get; set; }
         public string MapId { get; set; }
         public string FacetId { get; set; }
         
@@ -42,6 +43,7 @@ namespace EnhancedMap.Core.MapObjects
             Team = Convert.ToInt32(spawnDefinition.Team);
             SpawnerName = spawnDefinition.SpawnerName;
             Mobiles = spawnDefinition.Mobiles;
+            UniqueSpawn = spawnDefinition.UniqueSpawn;
 
             /// TODO: unhardcode this
             Image = new Bitmap(Image.FromFile(@"C:\Users\LENOVO\Desktop\Nouveau dossier\src\bin\Debug\Icon\GEM.png"), 16, 16);

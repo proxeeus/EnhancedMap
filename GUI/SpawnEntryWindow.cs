@@ -113,6 +113,8 @@ namespace EnhancedMap.GUI
             maxTimeTextBox.Text = spawnerData.MaxTime.ToString();
             teamTextBox.Text = spawnerData.Team.ToString();
             homeRangeTextBox.Text = spawnerData.HomeRange.ToString();
+            bringToHomeCheckBox.Checked = spawnerData.BringToHome;
+            uniqueSpawnCheckBox.Checked = spawnerData.UniqueSpawn;
 
             spawnMobilesListBox.DataSource = spawnerData.Mobiles;
         }

@@ -20,7 +20,8 @@ namespace EnhancedMap.Core
         public string X { get; set; }
         public string Y { get; set; }
         public string MapId { get; set; }
-       
+        public bool UniqueSpawn { get; internal set; }
+
         public SpawnDefinition() { Mobiles = new List<string>(); }
     }
 }

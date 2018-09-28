@@ -49,6 +49,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.allSpawnsListBox = new System.Windows.Forms.ListBox();
             this.loadSpawnButton = new System.Windows.Forms.Button();
+            this.uniqueSpawnCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             this.mobilesTreeView.HideSelection = false;
             this.mobilesTreeView.Location = new System.Drawing.Point(12, 12);
             this.mobilesTreeView.Name = "mobilesTreeView";
-            this.mobilesTreeView.Size = new System.Drawing.Size(230, 410);
+            this.mobilesTreeView.Size = new System.Drawing.Size(230, 449);
             this.mobilesTreeView.TabIndex = 0;
             this.mobilesTreeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.mobilesTreeView_NodeMouseDoubleClick);
             // 
@@ -162,7 +163,7 @@
             // 
             // mobileTypeNameTextBox
             // 
-            this.mobileTypeNameTextBox.Location = new System.Drawing.Point(130, 182);
+            this.mobileTypeNameTextBox.Location = new System.Drawing.Point(127, 214);
             this.mobileTypeNameTextBox.Name = "mobileTypeNameTextBox";
             this.mobileTypeNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.mobileTypeNameTextBox.TabIndex = 15;
@@ -179,14 +180,14 @@
             // spawnMobilesListBox
             // 
             this.spawnMobilesListBox.FormattingEnabled = true;
-            this.spawnMobilesListBox.Location = new System.Drawing.Point(18, 237);
+            this.spawnMobilesListBox.Location = new System.Drawing.Point(15, 269);
             this.spawnMobilesListBox.Name = "spawnMobilesListBox";
             this.spawnMobilesListBox.Size = new System.Drawing.Size(212, 173);
             this.spawnMobilesListBox.TabIndex = 16;
             // 
             // addMobileTypeButton
             // 
-            this.addMobileTypeButton.Location = new System.Drawing.Point(155, 208);
+            this.addMobileTypeButton.Location = new System.Drawing.Point(152, 240);
             this.addMobileTypeButton.Name = "addMobileTypeButton";
             this.addMobileTypeButton.Size = new System.Drawing.Size(75, 23);
             this.addMobileTypeButton.TabIndex = 17;
@@ -197,7 +198,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 185);
+            this.label7.Location = new System.Drawing.Point(12, 217);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 13);
             this.label7.TabIndex = 18;
@@ -213,6 +214,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.uniqueSpawnCheckBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.addMobileTypeButton);
             this.groupBox1.Controls.Add(this.label7);
@@ -232,7 +234,7 @@
             this.groupBox1.Controls.Add(this.maxTimeTextBox);
             this.groupBox1.Location = new System.Drawing.Point(248, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(238, 422);
+            this.groupBox1.Size = new System.Drawing.Size(238, 461);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spawn Entry";
@@ -242,14 +244,14 @@
             this.allSpawnsListBox.FormattingEnabled = true;
             this.allSpawnsListBox.Location = new System.Drawing.Point(492, 12);
             this.allSpawnsListBox.Name = "allSpawnsListBox";
-            this.allSpawnsListBox.Size = new System.Drawing.Size(163, 407);
+            this.allSpawnsListBox.Size = new System.Drawing.Size(163, 446);
             this.allSpawnsListBox.TabIndex = 20;
             this.allSpawnsListBox.SelectedIndexChanged += new System.EventHandler(this.allSpawnsListBox_SelectedIndexChanged);
             this.allSpawnsListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.allSpawnsListBox_MouseDoubleClick);
             // 
             // loadSpawnButton
             // 
-            this.loadSpawnButton.Location = new System.Drawing.Point(13, 429);
+            this.loadSpawnButton.Location = new System.Drawing.Point(12, 467);
             this.loadSpawnButton.Name = "loadSpawnButton";
             this.loadSpawnButton.Size = new System.Drawing.Size(642, 23);
             this.loadSpawnButton.TabIndex = 21;
@@ -257,11 +259,23 @@
             this.loadSpawnButton.UseVisualStyleBackColor = true;
             this.loadSpawnButton.Click += new System.EventHandler(this.loadSpawnButton_Click);
             // 
+            // uniqueSpawnCheckBox
+            // 
+            this.uniqueSpawnCheckBox.AutoSize = true;
+            this.uniqueSpawnCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.uniqueSpawnCheckBox.Location = new System.Drawing.Point(134, 179);
+            this.uniqueSpawnCheckBox.Name = "uniqueSpawnCheckBox";
+            this.uniqueSpawnCheckBox.Size = new System.Drawing.Size(94, 17);
+            this.uniqueSpawnCheckBox.TabIndex = 19;
+            this.uniqueSpawnCheckBox.Text = "Unique spawn";
+            this.uniqueSpawnCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.uniqueSpawnCheckBox.UseVisualStyleBackColor = true;
+            // 
             // SpawnEntryWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 456);
+            this.ClientSize = new System.Drawing.Size(658, 502);
             this.Controls.Add(this.loadSpawnButton);
             this.Controls.Add(this.allSpawnsListBox);
             this.Controls.Add(this.groupBox1);
@@ -298,5 +312,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox allSpawnsListBox;
         private System.Windows.Forms.Button loadSpawnButton;
+        private System.Windows.Forms.CheckBox uniqueSpawnCheckBox;
     }
 }
