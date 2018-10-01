@@ -161,6 +161,11 @@ namespace EnhancedMap.Core
             _objects[(int) LAYER_ORDER.OTHERS].Remove(obj);
         }
 
+        public static void RemoveSpawn(SpawnObject obj)
+        {
+            _objects[(int)LAYER_ORDER.SPAWNERS].Remove(obj);
+        }
+
         public static void RemoveSignal(SignalObject obj)
         {
             _objects[(int) LAYER_ORDER.SIGNALS].Remove(obj);
