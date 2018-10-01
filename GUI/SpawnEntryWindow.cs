@@ -105,6 +105,7 @@ namespace EnhancedMap.GUI
             var selectedSpawner = ((ListBox)sender).SelectedItem as SpawnObject ;
             SelectedSpawn = selectedSpawner;
 
+            if (SelectedSpawn == null) return;
             UpdateUI(SelectedSpawn);
 
             Global.X = SelectedSpawn.Position.X;
@@ -113,6 +114,7 @@ namespace EnhancedMap.GUI
 
         private void UpdateUI(SpawnObject spawnerData)
         {
+            if (spawnerData == null) return;
             spawnNameTextBox.Text = spawnerData.SpawnerName;
             npcCountTextBox.Text = spawnerData.NPCCount.ToString();
             minTimeTextBox.Text = spawnerData.MinTime.ToString();
@@ -172,6 +174,20 @@ namespace EnhancedMap.GUI
                 var writer = new SpawnWriter(Spawns);
                 writer.Save(saveFileDialog.FileName);
             }
+        }
+
+        private void deleteSpawnButton_Click(object sender, EventArgs e)
+        {
+            if (SelectedSpawn == null)
+            {
+                MessageBox.Show("Please select a valid spawn.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            RenderObjectsManager.RemoveSpawn(SelectedSpawn);
+            Spawns.Remove(SelectedSpawn);
+            
+
         }
     }
 }
