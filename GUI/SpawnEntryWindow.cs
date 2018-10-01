@@ -106,6 +106,9 @@ namespace EnhancedMap.GUI
             SelectedSpawn = selectedSpawner;
 
             UpdateUI(SelectedSpawn);
+
+            Global.X = SelectedSpawn.Position.X;
+            Global.Y = SelectedSpawn.Position.Y;
         }
 
         private void UpdateUI(SpawnObject spawnerData)
