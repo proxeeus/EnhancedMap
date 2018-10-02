@@ -1031,6 +1031,17 @@ namespace EnhancedMap.GUI
                 {
                 }
                     break;
+                case Keys.Control | Keys.D:
+                    if(_spawnEntrywindow.SelectedSpawn != null)
+                    {
+                        var split = MouseManager.LocationXY.Split(',');
+                        var x = split[0];
+                        var y = split[1];
+
+                        _spawnEntrywindow.SelectedSpawn.UpdatePosition(Convert.ToInt16(x), Convert.ToInt16(y));
+                        //RenderObjectsManager.
+                    }
+                    break;
                 case Keys.Up:
                 {
                     if (!Global.FreeView)
