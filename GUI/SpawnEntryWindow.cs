@@ -148,6 +148,16 @@ namespace EnhancedMap.GUI
             var result = dialog.ShowDialog();
             if (result == DialogResult.OK)
             {
+                // Clear map
+                if(Spawns.Count > 0)
+                {
+                    foreach(var spawn in Spawns)
+                    {
+                        RenderObjectsManager.RemoveSpawn(spawn);
+                    }
+                    Spawns.Clear();
+                }
+
                 var spawnReader = new SpawnReader();
                 spawnReader.MapFileName = dialog.FileName;
                 var spawns = spawnReader.LoadSpawns();
