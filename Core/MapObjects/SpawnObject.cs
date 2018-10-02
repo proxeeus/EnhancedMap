@@ -91,7 +91,7 @@ namespace EnhancedMap.Core.MapObjects
                 {
                     _label.IsVisible = true;
                     _label.UpdatePosition(MouseManager.Location.X, MouseManager.Location.Y);
-                    _label.Text = "Spawner";
+                    _label.Text = SpawnerName;
 
                 }
 
