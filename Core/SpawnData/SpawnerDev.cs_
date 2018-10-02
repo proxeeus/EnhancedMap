@@ -24,13 +24,13 @@ namespace Server
 		{
 			if( e.Length == 0 )
 			{
-				e.Mobile.SendMessage("You need to provide a valid .map name.");
+				e.Mobile.SendMessage("You need to provide an action as well as a valid .map name.");
 				return;
 			}
-			Parse( e.Mobile, e.GetString( 0 ).ToLower() );
+			Parse( e.Mobile, e.GetString( 0 ).ToLower(), e.GetString( 1 ).ToLower() );
 		}
 
-		public static void Parse( Mobile from, string spawnFile )
+		public static void Parse( Mobile from, string action, string spawnFile )
 		{
 			string vendor_path = Path.Combine( Core.BaseDirectory, string.Format("Data/{0}.map", spawnFile) );
 			m_Count = 0;
@@ -38,7 +38,10 @@ namespace Server
 			if ( File.Exists( vendor_path ) )
 			{
 				ArrayList list = new ArrayList();
-				from.SendMessage( "Generating Spawns..." );
+				if(action == "add")
+					from.SendMessage( "Generating Spawns..." );
+				else if(action == "delete")
+					from.SendMessage( "Deleting Spawns..." );
 
 				using ( StreamReader ip = new StreamReader( vendor_path ) )
 				{
@@ -78,11 +81,32 @@ namespace Server
 
 						if (split.Length < 3)
 							continue;
-						
-						PlaceNPC( split[0], split[1], split[2], mobsList, split[3], split[4], split[5], double.Parse(split[6],System.Globalization.CultureInfo.InvariantCulture), double.Parse(split[7],System.Globalization.CultureInfo.InvariantCulture), split[8], uniqueSpawn);
+						if(action == "add")
+							PlaceNPC( split[0], split[1], split[2], mobsList, split[3], split[4], split[5], double.Parse(split[6],System.Globalization.CultureInfo.InvariantCulture), double.Parse(split[7],System.Globalization.CultureInfo.InvariantCulture), split[8], uniqueSpawn);
+						else if(action == "delete")
+						{
+							// TODO: need to account for both maps :/
+							Map map;
+							switch ( Utility.ToInt32(split[2]) )
+							{	
+								case 0://Trammel and Felucca
+									map = Map.Felucca;
+									break;
+								case 1: // Felucca
+									map = Map.Felucca;
+									break;
+								default:
+									map = Map.Felucca;
+									break;
+							}
+							ClearSpawners( Utility.ToInt32(split[0]), Utility.ToInt32(split[1]), GetSpawnerZ( Utility.ToInt32(split[0]), Utility.ToInt32(split[1]), map ), map );
+						}	
 					}
 				}
-				from.SendMessage( "Done, added {0} spawners",m_Count );
+				if(action == "add")
+					from.SendMessage( "Done, added {0} spawners",m_Count );
+				else if(action == "delete")
+					from.SendMessage( "Done, all spawners have been removed.",m_Count );
 			}
 			else
 			{
