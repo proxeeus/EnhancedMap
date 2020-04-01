@@ -6,8 +6,13 @@ using Server.Mobiles;
 using Server.Commands;
 
 // Version 0.8
+// Usage:
+// . Place script inside the Script\Commands
+// . Place any .map file inside RunUO\Data
+// . [spawnerdev add/remove mymapfile
+// Note: do NOT provide the .map extension when running the command.
 
-namespace Server
+namespace Server.Commands
 {
     public class SpawnerDev
 	{
