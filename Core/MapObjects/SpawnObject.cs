@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Text;
@@ -46,8 +47,11 @@ namespace EnhancedMap.Core.MapObjects
             Mobiles = spawnDefinition.Mobiles;
             UniqueSpawn = spawnDefinition.UniqueSpawn;
 
-            /// TODO: unhardcode this
-            Image = new Bitmap(Image.FromFile(@"C:\Users\LENOVO\Desktop\Nouveau dossier\src\bin\Debug\Icon\GEM.png"), 16, 16);
+            var useCustomIcon = ConfigurationManager.AppSettings["UseCustomSpawnIcon"].ToBool();
+            if(useCustomIcon)
+                Image = new Bitmap(Image.FromFile(ConfigurationManager.AppSettings["CustomSpawnIcon"].ToString()), 16, 16);
+            else
+                Image = new Bitmap(Image.FromFile(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Icon\" + ConfigurationManager.AppSettings["DefaultSpawnIcon"]), 16, 16);
         }
 
         #region Rendering
