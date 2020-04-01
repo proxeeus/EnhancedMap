@@ -1,25 +1,38 @@
-# EnhancedMap
-A free Ultima Online map tool
+# Ultima Online spawn mapping tool
 
+Disclaimer: this tool is a fork of *EnhancedMap*, an open-source, UOAM-like tool that wasn't developed by me, I'm merely using their engine to represent map data.
 
-[Site](http://razorenhanced.org/)
+Please see the original project @ https://github.com/andreakarasho/EnhancedMap if you're interested in learning more !
 
-Download [Latest EnhancedMap](http://razorenhanced.org/download/Enhanced-updater.zip)
+# Purpose
 
+The purpose of this application is to have a visual tool that'll help server administrators implementing spawns across their UO worlds.
 
-# How can i compile EnhancedMapServer for my server machine?
-1. Install .NET Core 2.1:
+# Building the code
 
-   - Windows: https://www.microsoft.com/net/download/windows
-   - Linux: https://www.microsoft.com/net/download/linux
-   - macOS: https://www.microsoft.com/net/download/macos
-   
- 2. Open CMD and write ([here](https://github.com/dotnet/docs/blob/master/docs/core/rid-catalog.md) you can see all platforms available. Here im compiling for a Windows 10 x64 machine): 
-   ```
-   cd "{ENHANCEDMAPSERVERNETCORE_FOLDER}"
-   dotnet publish -c Release -r win10-x64
-   ```
-   
- 3. Navigate to "ENHANCEDMAPSERVERNETCORE_FOLDER/bin/Release/netcoreapp2.1/{YOUR_PLATFORM}/publish/"
- 
- 4. Run EnhancedMapServerNetCore.exe (if you are using windows, instead use terminal for linux/macos)
+Clone the git repo, launch the .sln, do a "full rebuild" and then tweak the app.config settings to your liking. Then, hit "Run".
+
+## Basic workflow
+
+* select a type of Mobile you want to spawn
+* assign a couple of infos about the spawner object
+* place the spawner on the map
+* rinse & repeat
+* save your work to a .map file
+
+## Using the spawn data
+
+The tool reads & writes .map files, which are text files containing all the spawn data that'll be injected into a shard.
+
+## Spawn workflow
+
+* copy the \Core\SpawnData\SpawnerDev.cs_ (todo: change name) into your runuo\scripts\commands directory
+* copy any .map files you need into your runuo\data\ directory
+* restart your server if needed
+* with an Administrator character, use [spawner dev add map_filename
+* Congrats ! Your spawns have been added
+
+## Tips
+
+The tool & its data output have been made with modularity in mind. Since it is possible to either add or remove spawns (in both cases, the code will read data from .map files and add/remove accordingly), do not hesitate to separate your spawns into smaller "units of work", so that you have full control over the spawn data granularity.
+
