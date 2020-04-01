@@ -16,7 +16,10 @@ Clone the git repo, launch the .sln, do a "full rebuild" and then tweak the app.
 
 * select a type of Mobile you want to spawn
 * assign a couple of infos about the spawner object
-* place the spawner on the map
+* type the MobileType you want to spawn in the corresponding text box
+* type Add
+* repeat if you want to have multiple Mobiles sharing the same spawn point
+* once you're happy, double-click anywhere on the map where you want to add the spawn point
 * rinse & repeat
 * save your work to a .map file
 
