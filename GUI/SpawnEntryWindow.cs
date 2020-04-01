@@ -3,6 +3,7 @@ using EnhancedMap.Core.MapObjects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -64,7 +65,7 @@ namespace EnhancedMap.GUI
 
         private void InitMobileTypes()
         {
-            var mobilesPath = @"D:\RunUO.T2A\Scripts\Mobiles";
+            var mobilesPath = ConfigurationManager.AppSettings["UODir"].ToString();
             var mobilesDirectory = new DirectoryInfo(mobilesPath);
 
             ListDirectory(mobilesTreeView, mobilesPath);
