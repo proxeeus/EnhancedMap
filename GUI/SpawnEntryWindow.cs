@@ -65,7 +65,7 @@ namespace EnhancedMap.GUI
 
         private void InitMobileTypes()
         {
-            var mobilesPath = ConfigurationManager.AppSettings["UODir"].ToString();
+            var mobilesPath = ConfigurationManager.AppSettings["RunUODir"].ToString();
             var mobilesDirectory = new DirectoryInfo(mobilesPath);
 
             ListDirectory(mobilesTreeView, mobilesPath);

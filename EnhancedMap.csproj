@@ -363,6 +363,7 @@
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Core\SpawnData\monsters_Grimoric_T2A.map" />
+    <None Include="Core\SpawnData\SpawnerDev_Rebirth.cs_" />
     <None Include="Core\SpawnData\spawns_Nerun_rebirth.map" />
     <None Include="Core\SpawnData\vendors_Grimoric_T2A.map" />
     <None Include="libs\MapWindow.lua" />
