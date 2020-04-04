@@ -1,0 +1,63 @@
+.map to .map (PremiumSpawner to Proxeeus) conversion
+=====================================================
+
+Examples
+
+Premium:
+
+*|BlackPearl:Bloodmoss:SpidersSilk:SulfurousAsh:Garlic:Ginseng:Nightshade:MandrakeRoot||||||2854|816|0|1|11|23|200|200|1|160|0|0|0|0|0
+
+Premium format:
+===============
+
+The first 6 | are the Types (mobiles/items) to spawn
+X
+Y
+?
+Map
+MinTime
+MaxTime
+HomeRange ?
+HomeRange ?
+?
+Quantity
+
+Proxeeus
+
++reagents [BlackPearl|Bloodmoss|SpidersSilk|SulfurousAsh|Garlic|Ginseng|Nightshade|MandrakeRoot]: 2854 816 0 160 200 False 11.0 23.0 0
+
+Proxeeus format:
+================
+The first 6 | are the Types (mobiles/items) to spawn
+X
+Y
+Map (Hardcoded??) 1 should be Felucca
+Quantity
+HomeRange
+BringToHome (true / false) true will stack everything on the spawn point. OK for Mobs, shitty for items.
+MinTime
+MaxTime
+Team (usually 0?)
+
+
+Premium
+
+*|provisioner|cobbler|||||5219|4012|37|1|5|10|5|0|1|1|1|0|0|0|0
+The first 6 | are the Types (mobiles/items) to spawn
+X
+Y
+?
+Map
+MinTime
+MaxTime
+HomeRange
+?
+?
+?
+?
+?
+?
+?
+?
+
++provisioner [Provisioner, Cobbler]: 5219 4012 0 1 5 True 2.5 10.0 0
