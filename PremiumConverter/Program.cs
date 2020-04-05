@@ -27,8 +27,9 @@ namespace PremiumConverter
             Console.WriteLine("==========================");
             Console.WriteLine("Choose an option:");
             Console.WriteLine("");
-            Console.WriteLine("1) Convert a PremiumSpawner .map to a Proxeeus .map");
-            Console.WriteLine("2) Check types in a .map file");
+            Console.WriteLine("1) Convert a single PremiumSpawner .map to an UOSpawner .map");
+            Console.WriteLine("2) Batch convert (parses a directory for all .map files inside and converts them).");
+            Console.WriteLine("3) Check types in a .map file");
             Console.WriteLine("Q) Quit");
 
             switch(Console.ReadLine().ToLower())
@@ -37,6 +38,9 @@ namespace PremiumConverter
                     Convert();
                     return true;
                 case "2":
+                    BatchConvert();
+                    return true;
+                case "3":
                     Check();
                     return true;
                 case "q":
@@ -46,15 +50,27 @@ namespace PremiumConverter
             }
         }
 
-        /// <summary>
-        /// Asks for a .map path, processes it, and creates a Proxeeus .map file.
-        /// </summary>
-        static void Convert()
+        static void BatchConvert()
         {
             Console.Clear();
-            Console.WriteLine("Enter the path of the Premium Spawner .map file:");
+            Console.WriteLine("Enter the directory containing the .map files:");
             var premiumPath = Console.ReadLine();
-            if(File.Exists(premiumPath))
+
+            var rootMapDir = new DirectoryInfo(premiumPath);
+            foreach (var file in rootMapDir.GetFiles("*.map"))
+                ConvertSingleFile(file.FullName);
+
+            Console.WriteLine("Done!");
+            Console.ReadLine();
+        }
+
+        /// <summary>
+        /// The actual file conversion method.
+        /// </summary>
+        /// <param name="premiumPath"></param>
+        static void ConvertSingleFile(string premiumPath)
+        {
+            if (File.Exists(premiumPath))
             {
                 Console.WriteLine("Now reading from '{0}'...", premiumPath);
                 Console.WriteLine();
@@ -85,11 +101,11 @@ namespace PremiumConverter
 
                             */
 
-                            
+
                             var spawnDef = new SpawnDefinition();
 
                             Helpers.AddSpawnTypesToDefinition(splitData, spawnDef);
-                            if(spawnDef.Mobiles.Count > 6)
+                            if (spawnDef.Mobiles.Count > 6)
                             {
                                 Console.WriteLine("WARNING: '{0}' currently defines more than 6 mobiles!", line);
                                 Console.ReadLine();
@@ -97,7 +113,7 @@ namespace PremiumConverter
                             spawnDef.SpawnerName = mapFileInfo.Name + "_" + splitData[1];
                             spawnDef.X = splitData[7];
                             spawnDef.Y = splitData[8];
-                            spawnDef.MapId = splitData[10]; 
+                            spawnDef.MapId = splitData[10];
                             spawnDef.MinTime = splitData[11];
                             spawnDef.MaxTime = splitData[12];
                             spawnDef.Team = "0";  // Hardcoded for now, not sure what this does
@@ -122,6 +138,19 @@ namespace PremiumConverter
             {
                 Console.WriteLine("Error: file doesn't exist!");
             }
+        }
+
+        /// <summary>
+        /// Asks for a .map path, processes it, and creates a Proxeeus .map file.
+        /// </summary>
+        static void Convert()
+        {
+            Console.Clear();
+            Console.WriteLine("Enter the path of the Premium Spawner .map file:");
+            var premiumPath = Console.ReadLine();
+
+            ConvertSingleFile(premiumPath);
+
             Console.WriteLine("Done!");
             Console.ReadLine();
         }
