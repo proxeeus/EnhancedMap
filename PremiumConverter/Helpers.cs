@@ -1,9 +1,11 @@
 ﻿using EnhancedMap.Core;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PremiumConverter
@@ -107,9 +109,9 @@ namespace PremiumConverter
                     var mobBuilder = new StringBuilder();
                     var separator = string.Empty;
                     if (spawnDef.UniqueSpawn)
-                        separator = ", ";
+                        separator = ",";
                     else
-                        separator = "| ";
+                        separator = "|";
                     var mobIndex = 1;
                     for (var i = 0; i < spawnDef.Mobiles.Count; i++)
                     {
@@ -176,6 +178,91 @@ namespace PremiumConverter
             else
                 Console.WriteLine("ERROR: file not found or does not exist!");
             return types;
+        }
+
+        internal static void FixDataTypes(string mapPath, List<string> partialMatches)
+        {
+            var bufferNewFile = new List<string>();
+            using (var reader = new StreamReader(mapPath))
+            {
+                var line = string.Empty;
+                var culture = CultureInfo.CurrentCulture;
+                const char TEMP_SEPARATOR = '£';
+                
+                while ((line = reader.ReadLine()) != null)
+                {
+                    if (Helpers.IgnoreLine(line))
+                    {
+                        bufferNewFile.Add(line);
+                        continue;
+                    }
+
+                    var oldLine = line;
+                    var lineCorrected = false;
+
+                    foreach (var partialMatch in partialMatches)
+                    {
+                        var oldSeparator = ' ';
+
+                        // The 'hacky' partial match is constructed in a way to have strict delimiters to better match occurences in a given line and
+                        // avoid bugs like EvilMageLord becoming EvilMagelord when only "EvilMage" matches, thus losing any kind of previously existing
+                        // formatting.
+                        // I know, this blows.
+
+                        // Moreover, we temporarily HAVE to replace | and , separators with temporary ones because otherwise the regex engine will
+                        // go completely balls to the wall INSANE and fuck up the correction algorithm.
+                        // Once the type mismatch is corrected, we revert back to the previous separator styles.
+                        // I know, this blows.
+                        var hackyPartialMatch = string.Empty;
+                        if (line.Contains("|"))
+                        {
+                            oldSeparator = '|';
+                            hackyPartialMatch = TEMP_SEPARATOR + partialMatch + TEMP_SEPARATOR;
+                            line = line.Replace('|', TEMP_SEPARATOR);
+                        }
+
+                        else if (line.Contains(","))
+                        {
+                            oldSeparator = ',';
+                            hackyPartialMatch = TEMP_SEPARATOR + partialMatch + TEMP_SEPARATOR;
+                            line = line.Replace(',', TEMP_SEPARATOR);
+                        }
+                        else
+                            hackyPartialMatch = partialMatch;
+
+                        // Add 'fake' boundaries to the line to have a change to get ALL matches 
+                        line = line.Insert(line.IndexOf("[") + 1, TEMP_SEPARATOR.ToString());
+                        line = line.Insert(line.LastIndexOf("]"), TEMP_SEPARATOR.ToString());
+
+                        if (culture.CompareInfo.IndexOf(line, hackyPartialMatch, CompareOptions.IgnoreCase) >= 0)
+                        {
+                            var regex = new Regex(hackyPartialMatch, RegexOptions.IgnoreCase);
+                            line = regex.Replace(line, hackyPartialMatch);
+                        }
+                        // Remove the fake boundary
+                        line = line.Remove(line.IndexOf(TEMP_SEPARATOR), 1);
+                        line = line.Remove(line.LastIndexOf(TEMP_SEPARATOR), 1);
+                        // Remove the temp separator
+                        line = line.Replace(TEMP_SEPARATOR, oldSeparator);
+
+                        lineCorrected = true;
+                    }
+                    if (lineCorrected)
+                        bufferNewFile.Add(line);
+                    else
+                        bufferNewFile.Add(oldLine);
+                }
+            }
+
+            using(var writer = new StreamWriter(mapPath))
+            {
+                foreach(var line in bufferNewFile)
+                {
+                    writer.WriteLine(line);
+                }
+            }
+
+            Console.WriteLine("'{0}' has been fixed wherever possible.", mapPath);
         }
     }
 }

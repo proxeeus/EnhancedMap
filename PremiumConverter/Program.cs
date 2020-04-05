@@ -171,12 +171,13 @@ namespace PremiumConverter
             var mapPath = Console.ReadLine();
 
             var types = Helpers.LoadSpawnTypesFrom(mapPath);
-
-            foreach(var type in types)
+            var partialMatches = new List<string>();
+            foreach (var type in types)
             {
                 var found = false;
                 var partialMatch = false;
                 var currentCorePartialMatch = string.Empty;
+                
                 foreach (var coreType in scriptCore.DefinedTypes)
                 {
                     if (coreType.Name == type)
@@ -189,6 +190,7 @@ namespace PremiumConverter
                     {
                         partialMatch = true;
                         currentCorePartialMatch = coreType.Name;
+                        partialMatches.Add(currentCorePartialMatch);
                     }
                         
                 }
@@ -197,6 +199,19 @@ namespace PremiumConverter
                     Console.WriteLine("Type '{0}' doesn't exist in the assembly, closest match found: '{1}'.", type, currentCorePartialMatch);
                 else if (!found)
                     Console.WriteLine("Type '{0}' doesn't exist in the assembly.", type);
+            }
+
+            if(partialMatches.Count>0)
+            {
+                Console.WriteLine("Found {0} partial matches. Do you want to attempt to fix those? (y/n)", partialMatches.Count);
+
+                var answer = Console.ReadLine();
+                switch(answer.ToLower())
+                {
+                    case "y":
+                        Helpers.FixDataTypes(mapPath, partialMatches);
+                        break;
+                }
             }
 
             Console.WriteLine("Done!");
