@@ -1,9 +1,12 @@
 ﻿using EnhancedMap.Core;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PremiumConverter
@@ -29,7 +32,7 @@ namespace PremiumConverter
             Console.WriteLine("");
             Console.WriteLine("1) Convert a single PremiumSpawner .map to an UOSpawner .map");
             Console.WriteLine("2) Batch convert (parses a directory for all .map files inside and converts them).");
-            Console.WriteLine("3) Check types in a .map file");
+            Console.WriteLine("3) Validate .map file against the scripts core");
             Console.WriteLine("Q) Quit");
 
             switch(Console.ReadLine().ToLower())
@@ -106,10 +109,8 @@ namespace PremiumConverter
 
                             Helpers.AddSpawnTypesToDefinition(splitData, spawnDef);
                             if (spawnDef.Mobiles.Count > 6)
-                            {
                                 Console.WriteLine("WARNING: '{0}' currently defines more than 6 mobiles!", line);
-                                Console.ReadLine();
-                            }
+
                             spawnDef.SpawnerName = mapFileInfo.Name + "_" + splitData[1];
                             spawnDef.X = splitData[7];
                             spawnDef.Y = splitData[8];
@@ -156,11 +157,49 @@ namespace PremiumConverter
         }
 
         /// <summary>
-        /// Checks a Proxeeus .map file for any missing types from Items / Mobiles scripts.
+        /// Checks a Proxeeus .map file for any missing types from Items / Mobiles scripts against a given pre-compiled RunUO script core.
         /// </summary>
         static void Check()
         {
-            Console.WriteLine("Not implemented yet!");
+            Console.Clear();
+            Console.WriteLine("Loading RunUO script core from");
+            Console.WriteLine("'{0}'", ConfigurationManager.AppSettings["RunUOCore"]);
+            Console.WriteLine("Successfully loaded assembly!");
+            Console.WriteLine("");
+            Console.WriteLine("Enter the path of the Premium Spawner .map file:");
+            var scriptCore = Assembly.LoadFrom(ConfigurationManager.AppSettings["RunUOCore"]);
+            var mapPath = Console.ReadLine();
+
+            var types = Helpers.LoadSpawnTypesFrom(mapPath);
+
+            foreach(var type in types)
+            {
+                var found = false;
+                var partialMatch = false;
+                var currentCorePartialMatch = string.Empty;
+                foreach (var coreType in scriptCore.DefinedTypes)
+                {
+                    if (coreType.Name == type)
+                    {
+                        found = true;
+                        break;
+                    }
+                        
+                    if (coreType.Name.Equals(type, StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        partialMatch = true;
+                        currentCorePartialMatch = coreType.Name;
+                    }
+                        
+                }
+
+                if(partialMatch)
+                    Console.WriteLine("Type '{0}' doesn't exist in the assembly, closest match found: '{1}'.", type, currentCorePartialMatch);
+                else if (!found)
+                    Console.WriteLine("Type '{0}' doesn't exist in the assembly.", type);
+            }
+
+            Console.WriteLine("Done!");
             Console.ReadLine();
         }
     }

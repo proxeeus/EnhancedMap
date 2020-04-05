@@ -43,22 +43,7 @@ Team (usually 0?)
 Premium
 
 *|healer|healerguildmaster|||||1471|1611|20|1|5|10|5|0|1|1|1|0|0|0|0
-The first 6 | are the Types (mobiles/items) to spawn
-X
-Y
-Z
-Map
-HomeRange
-MaxTime
-MinTime?
-?
-?
-?
-?
-?
-?
-?
-?
+*| typename:typename:... |s1 |s2 |s3 |s4 |s5 | x | y | z | map | mindelay maxdelay homerange spawnrange spawnid maxcount | maxcount1 | maxcount2 | maxcount3 | maxcount4 | maxcount5
 
 
 +provisioner [Provisioner, Cobbler]: 5219 4012 0 1 5 True 2.5 10.0 0
