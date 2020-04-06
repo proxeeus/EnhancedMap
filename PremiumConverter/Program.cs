@@ -147,7 +147,7 @@ namespace PremiumConverter
         static void Convert()
         {
             Console.Clear();
-            Console.WriteLine("Enter the path of the Premium Spawner .map file:");
+            Console.WriteLine("Enter the path of the Premium Spawner .map file (drag & drop works):");
             var premiumPath = Console.ReadLine();
 
             ConvertSingleFile(premiumPath);
@@ -166,7 +166,7 @@ namespace PremiumConverter
             Console.WriteLine("'{0}'", ConfigurationManager.AppSettings["RunUOCore"]);
             Console.WriteLine("Successfully loaded assembly!");
             Console.WriteLine("");
-            Console.WriteLine("Enter the path of the Premium Spawner .map file:");
+            Console.WriteLine("Enter the path of the Premium Spawner .map file (drag & drop works):");
             var scriptCore = Assembly.LoadFrom(ConfigurationManager.AppSettings["RunUOCore"]);
             var mapPath = Console.ReadLine();
 
