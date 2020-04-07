@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI.MapMakerSteps
+﻿namespace Spawn.GUI.MapMakerSteps
 {
     partial class KindClientStep
     {
@@ -36,7 +36,7 @@
             // 
             // pictureBoxClassic
             // 
-            this.pictureBoxClassic.Image = global::EnhancedMap.Properties.Resources.uoclassic;
+            this.pictureBoxClassic.Image = global::Spawn.Properties.Resources.uoclassic;
             this.pictureBoxClassic.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxClassic.Name = "pictureBoxClassic";
             this.pictureBoxClassic.Size = new System.Drawing.Size(217, 384);
@@ -46,7 +46,7 @@
             // 
             // pictureBoxCustom
             // 
-            this.pictureBoxCustom.Image = global::EnhancedMap.Properties.Resources.uoenhanced;
+            this.pictureBoxCustom.Image = global::Spawn.Properties.Resources.uoenhanced;
             this.pictureBoxCustom.Location = new System.Drawing.Point(241, 3);
             this.pictureBoxCustom.Name = "pictureBoxCustom";
             this.pictureBoxCustom.Size = new System.Drawing.Size(217, 384);

@@ -2,11 +2,11 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Aga.Controls;
-using EnhancedMap.Core;
-using EnhancedMap.Core.MapObjects;
-using EnhancedMap.Core.Network;
+using Spawn.Core;
+using Spawn.Core.MapObjects;
+using Spawn.Core.Network;
 
-namespace EnhancedMap.GUI
+namespace Spawn.GUI
 {
     public partial class SharedLabelF : CustomForm
     {

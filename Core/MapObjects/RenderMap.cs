@@ -4,7 +4,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 
-namespace EnhancedMap.Core.MapObjects
+namespace Spawn.Core.MapObjects
 {
     public class Palette
     {

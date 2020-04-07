@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI.MapMakerSteps
+﻿namespace Spawn.GUI.MapMakerSteps
 {
     partial class CreationMapsStep
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.customProgressBar1 = new EnhancedMap.GUI.CustomProgressBar();
+            this.customProgressBar1 = new Spawn.GUI.CustomProgressBar();
             this.SuspendLayout();
             // 
             // textBox1

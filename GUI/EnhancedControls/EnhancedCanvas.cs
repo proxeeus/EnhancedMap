@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using EnhancedMap.Core;
+using Spawn.Core;
 
-namespace EnhancedMap.GUI
+namespace Spawn.GUI
 {
     public enum ZoomType
     {

@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace EnhancedMap.GUI
+namespace Spawn.GUI
 {
     public class CustomProgressBar : ProgressBar
     {

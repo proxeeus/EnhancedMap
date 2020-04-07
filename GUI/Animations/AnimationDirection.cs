@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI.Animations
+﻿namespace Spawn.GUI.Animations
 {
     internal enum AnimationDirection
     {

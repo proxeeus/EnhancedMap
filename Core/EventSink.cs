@@ -1,7 +1,7 @@
 ﻿using System;
-using EnhancedMap.Core.Network;
+using Spawn.Core.Network;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public struct ResponseServerEntry
     {

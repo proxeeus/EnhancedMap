@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     // only to port v1 to v2 map
 

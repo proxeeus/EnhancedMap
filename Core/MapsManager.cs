@@ -9,7 +9,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Xml;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public class MapEntry
     {

@@ -6,13 +6,13 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using EnhancedMap.Core;
-using EnhancedMap.Core.MapObjects;
-using EnhancedMap.Core.Network;
-using EnhancedMap.Diagnostic;
-using EnhancedMap.Properties;
+using Spawn.Core;
+using Spawn.Core.MapObjects;
+using Spawn.Core.Network;
+using Spawn.Diagnostic;
+using Spawn.Properties;
 
-namespace EnhancedMap.GUI
+namespace Spawn.GUI
 {
     public partial class MainWindow : CustomForm
     {
@@ -45,9 +45,9 @@ namespace EnhancedMap.GUI
             Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
 #if BETA
-            Text = $"Enhanced Map - {MainCore.MapVersion} - BETA";
+            Text = $"Spawn - {MainCore.MapVersion} - BETA";
 #else
-            Text = $"Enhanced Map - {MainCore.MapVersion}";
+            Text = $"Spawn - {MainCore.MapVersion}";
 #endif
 
             SettingsWindow = new Settings {Visible = false};
@@ -515,9 +515,9 @@ namespace EnhancedMap.GUI
             void func(ConnectionStatus status)
             {
 #if BETA
-                this.Do(s => s.Text = $"Enhanced Map - {MainCore.MapVersion} - {status} - BETA");
+                this.Do(s => s.Text = $"Spawn - {MainCore.MapVersion} - {status} - BETA");
 #else
-                this.Do(s => s.Text = $"Enhanced Map - {MainCore.MapVersion} - {status}");
+                this.Do(s => s.Text = $"Spawn - {MainCore.MapVersion} - {status}");
 #endif
                 this.Do(s => s.Invalidate());
 

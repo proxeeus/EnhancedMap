@@ -3,11 +3,11 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml;
-using EnhancedMap.Core;
-using EnhancedMap.Core.Network;
-using EnhancedMap.Diagnostic;
+using Spawn.Core;
+using Spawn.Core.Network;
+using Spawn.Diagnostic;
 
-namespace EnhancedMap.GUI.SettingsLayouts
+namespace Spawn.GUI.SettingsLayouts
 {
     public partial class DiagnosticLayout : UserControl
     {

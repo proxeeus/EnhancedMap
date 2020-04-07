@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Net;
 using System.Windows.Forms;
-using EnhancedMap.Core.MapObjects;
+using Spawn.Core.MapObjects;
 
-namespace EnhancedMap.Core.Network
+namespace Spawn.Core.Network
 {
     [Flags]
     public enum AccessLevel

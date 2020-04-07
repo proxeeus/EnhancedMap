@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EnhancedMap.Core.MapObjects
+namespace Spawn.Core.MapObjects
 {
     public struct Position
     {

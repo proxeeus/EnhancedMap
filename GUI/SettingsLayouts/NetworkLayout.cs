@@ -1,10 +1,10 @@
 ﻿using System.Windows.Forms;
 using System.Xml;
-using EnhancedMap.Core;
-using EnhancedMap.Core.Network;
-using EnhancedMap.Properties;
+using Spawn.Core;
+using Spawn.Core.Network;
+using Spawn.Properties;
 
-namespace EnhancedMap.GUI.SettingsLayouts
+namespace Spawn.GUI.SettingsLayouts
 {
     public partial class NetworkLayout : UserControl
     {

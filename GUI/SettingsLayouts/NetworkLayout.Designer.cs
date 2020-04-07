@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI.SettingsLayouts
+﻿namespace Spawn.GUI.SettingsLayouts
 {
     partial class NetworkLayout
     {
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.customFlatButtonDelProfile = new EnhancedMap.GUI.CustomFlatButton();
-            this.customFlatButtonAddProfile = new EnhancedMap.GUI.CustomFlatButton();
+            this.customFlatButtonDelProfile = new Spawn.GUI.CustomFlatButton();
+            this.customFlatButtonAddProfile = new Spawn.GUI.CustomFlatButton();
             this.comboBoxProfileName = new System.Windows.Forms.ComboBox();
             this.checkBoxRememberCredentials = new System.Windows.Forms.CheckBox();
             this.textboxPassword = new System.Windows.Forms.TextBox();
@@ -46,7 +46,7 @@
             this.checkboxAutologin = new System.Windows.Forms.CheckBox();
             this.checkBoxTryReconnect = new System.Windows.Forms.CheckBox();
             this.numericUpDownTryReconnect = new System.Windows.Forms.NumericUpDown();
-            this.customButtonConnect = new EnhancedMap.GUI.CustomButton();
+            this.customButtonConnect = new Spawn.GUI.CustomButton();
             this.groupBox12.SuspendLayout();
             this.groupBox14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTryReconnect)).BeginInit();
@@ -80,7 +80,7 @@
             this.customFlatButtonDelProfile.IsSelected = false;
             this.customFlatButtonDelProfile.Location = new System.Drawing.Point(427, 57);
             this.customFlatButtonDelProfile.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.customFlatButtonDelProfile.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonDelProfile.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonDelProfile.Name = "customFlatButtonDelProfile";
             this.customFlatButtonDelProfile.Size = new System.Drawing.Size(47, 23);
             this.customFlatButtonDelProfile.TabIndex = 30;
@@ -98,7 +98,7 @@
             this.customFlatButtonAddProfile.IsSelected = false;
             this.customFlatButtonAddProfile.Location = new System.Drawing.Point(372, 57);
             this.customFlatButtonAddProfile.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.customFlatButtonAddProfile.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonAddProfile.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonAddProfile.Name = "customFlatButtonAddProfile";
             this.customFlatButtonAddProfile.Size = new System.Drawing.Size(47, 23);
             this.customFlatButtonAddProfile.TabIndex = 29;
@@ -258,12 +258,12 @@
             // 
             this.customButtonConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.customButtonConnect.ForceHover = false;
-            this.customButtonConnect.Image = global::EnhancedMap.Properties.Resources.wrong;
+            this.customButtonConnect.Image = global::Spawn.Properties.Resources.wrong;
             this.customButtonConnect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.customButtonConnect.IsHover = false;
             this.customButtonConnect.IsPressed = false;
             this.customButtonConnect.Location = new System.Drawing.Point(177, 436);
-            this.customButtonConnect.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonConnect.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonConnect.Name = "customButtonConnect";
             this.customButtonConnect.Size = new System.Drawing.Size(162, 40);
             this.customButtonConnect.TabIndex = 8;

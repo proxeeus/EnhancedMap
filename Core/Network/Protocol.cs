@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.Core.Network
+﻿namespace Spawn.Core.Network
 {
     public enum Protocol
     {

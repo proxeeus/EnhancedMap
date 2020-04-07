@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EnhancedMap.Diagnostic
+namespace Spawn.Diagnostic
 {
     public enum MESSAGE_SEVERITY
     {

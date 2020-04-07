@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI
+﻿namespace Spawn.GUI
 {
     partial class Settings
     {
@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.customFlatButtonAbout = new EnhancedMap.GUI.CustomFlatButton();
-            this.customFlatButtonLabels = new EnhancedMap.GUI.CustomFlatButton();
-            this.customFlatButtonRemote = new EnhancedMap.GUI.CustomFlatButton();
-            this.customFlatButtonApplication = new EnhancedMap.GUI.CustomFlatButton();
-            this.customFlatButtonDiagnostic = new EnhancedMap.GUI.CustomFlatButton();
-            this.customFlatButtonGenerals = new EnhancedMap.GUI.CustomFlatButton();
-            this.customFlatButtonNetwork = new EnhancedMap.GUI.CustomFlatButton();
+            this.customFlatButtonAbout = new Spawn.GUI.CustomFlatButton();
+            this.customFlatButtonLabels = new Spawn.GUI.CustomFlatButton();
+            this.customFlatButtonRemote = new Spawn.GUI.CustomFlatButton();
+            this.customFlatButtonApplication = new Spawn.GUI.CustomFlatButton();
+            this.customFlatButtonDiagnostic = new Spawn.GUI.CustomFlatButton();
+            this.customFlatButtonGenerals = new Spawn.GUI.CustomFlatButton();
+            this.customFlatButtonNetwork = new Spawn.GUI.CustomFlatButton();
             this.panelSet = new System.Windows.Forms.Panel();
-            this.customButtonOk = new EnhancedMap.GUI.CustomButton();
+            this.customButtonOk = new Spawn.GUI.CustomButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -71,7 +71,7 @@
             this.customFlatButtonAbout.IsSelected = false;
             this.customFlatButtonAbout.Location = new System.Drawing.Point(0, 230);
             this.customFlatButtonAbout.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.customFlatButtonAbout.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonAbout.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonAbout.Name = "customFlatButtonAbout";
             this.customFlatButtonAbout.Size = new System.Drawing.Size(148, 46);
             this.customFlatButtonAbout.TabIndex = 4;
@@ -90,7 +90,7 @@
             this.customFlatButtonLabels.IsSelected = false;
             this.customFlatButtonLabels.Location = new System.Drawing.Point(0, 184);
             this.customFlatButtonLabels.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.customFlatButtonLabels.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonLabels.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonLabels.Name = "customFlatButtonLabels";
             this.customFlatButtonLabels.Size = new System.Drawing.Size(148, 46);
             this.customFlatButtonLabels.TabIndex = 3;
@@ -109,7 +109,7 @@
             this.customFlatButtonRemote.IsSelected = false;
             this.customFlatButtonRemote.Location = new System.Drawing.Point(0, 138);
             this.customFlatButtonRemote.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.customFlatButtonRemote.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonRemote.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonRemote.Name = "customFlatButtonRemote";
             this.customFlatButtonRemote.Size = new System.Drawing.Size(148, 46);
             this.customFlatButtonRemote.TabIndex = 6;
@@ -128,7 +128,7 @@
             this.customFlatButtonApplication.IsSelected = false;
             this.customFlatButtonApplication.Location = new System.Drawing.Point(0, 92);
             this.customFlatButtonApplication.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.customFlatButtonApplication.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonApplication.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonApplication.Name = "customFlatButtonApplication";
             this.customFlatButtonApplication.Size = new System.Drawing.Size(148, 46);
             this.customFlatButtonApplication.TabIndex = 2;
@@ -147,7 +147,7 @@
             this.customFlatButtonDiagnostic.IsSelected = false;
             this.customFlatButtonDiagnostic.Location = new System.Drawing.Point(0, 497);
             this.customFlatButtonDiagnostic.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.customFlatButtonDiagnostic.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonDiagnostic.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonDiagnostic.Name = "customFlatButtonDiagnostic";
             this.customFlatButtonDiagnostic.Size = new System.Drawing.Size(148, 46);
             this.customFlatButtonDiagnostic.TabIndex = 5;
@@ -166,7 +166,7 @@
             this.customFlatButtonGenerals.IsSelected = false;
             this.customFlatButtonGenerals.Location = new System.Drawing.Point(0, 46);
             this.customFlatButtonGenerals.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.customFlatButtonGenerals.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonGenerals.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonGenerals.Name = "customFlatButtonGenerals";
             this.customFlatButtonGenerals.Size = new System.Drawing.Size(148, 46);
             this.customFlatButtonGenerals.TabIndex = 1;
@@ -185,7 +185,7 @@
             this.customFlatButtonNetwork.IsSelected = false;
             this.customFlatButtonNetwork.Location = new System.Drawing.Point(0, 0);
             this.customFlatButtonNetwork.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.customFlatButtonNetwork.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonNetwork.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonNetwork.Name = "customFlatButtonNetwork";
             this.customFlatButtonNetwork.Size = new System.Drawing.Size(148, 46);
             this.customFlatButtonNetwork.TabIndex = 0;
@@ -207,7 +207,7 @@
             this.customButtonOk.IsHover = false;
             this.customButtonOk.IsPressed = false;
             this.customButtonOk.Location = new System.Drawing.Point(594, 530);
-            this.customButtonOk.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonOk.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonOk.Name = "customButtonOk";
             this.customButtonOk.Size = new System.Drawing.Size(97, 34);
             this.customButtonOk.TabIndex = 5;
@@ -216,7 +216,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EnhancedMap.Properties.Resources.PayPal;
+            this.pictureBox1.Image = global::Spawn.Properties.Resources.PayPal;
             this.pictureBox1.Location = new System.Drawing.Point(165, 515);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 59);

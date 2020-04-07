@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI.SettingsLayouts
+﻿namespace Spawn.GUI.SettingsLayouts
 {
     partial class LabelsLayout
     {
@@ -40,12 +40,12 @@
             this.nodeTextBox3 = new Aga.Controls.Tree.NodeControls.NodeTextBox();
             this.nodeTextBox4 = new Aga.Controls.Tree.NodeControls.NodeTextBox();
             this.nodeCheckBox2 = new Aga.Controls.Tree.NodeControls.NodeCheckBox();
-            this.customButtonShowNamesAll = new EnhancedMap.GUI.CustomButton();
-            this.customButtonHideNamesAll = new EnhancedMap.GUI.CustomButton();
-            this.customButtonEnableAll = new EnhancedMap.GUI.CustomButton();
-            this.customButtonDisableAll = new EnhancedMap.GUI.CustomButton();
-            this.customButtonCollapseAll = new EnhancedMap.GUI.CustomButton();
-            this.customButtonExpandAll = new EnhancedMap.GUI.CustomButton();
+            this.customButtonShowNamesAll = new Spawn.GUI.CustomButton();
+            this.customButtonHideNamesAll = new Spawn.GUI.CustomButton();
+            this.customButtonEnableAll = new Spawn.GUI.CustomButton();
+            this.customButtonDisableAll = new Spawn.GUI.CustomButton();
+            this.customButtonCollapseAll = new Spawn.GUI.CustomButton();
+            this.customButtonExpandAll = new Spawn.GUI.CustomButton();
             this.treeViewAdv1 = new Aga.Controls.Tree.TreeViewAdv();
             this.SuspendLayout();
             // 
@@ -139,7 +139,7 @@
             this.customButtonShowNamesAll.IsHover = false;
             this.customButtonShowNamesAll.IsPressed = false;
             this.customButtonShowNamesAll.Location = new System.Drawing.Point(201, 415);
-            this.customButtonShowNamesAll.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonShowNamesAll.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonShowNamesAll.Name = "customButtonShowNamesAll";
             this.customButtonShowNamesAll.Size = new System.Drawing.Size(119, 23);
             this.customButtonShowNamesAll.TabIndex = 14;
@@ -153,7 +153,7 @@
             this.customButtonHideNamesAll.IsHover = false;
             this.customButtonHideNamesAll.IsPressed = false;
             this.customButtonHideNamesAll.Location = new System.Drawing.Point(201, 443);
-            this.customButtonHideNamesAll.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonHideNamesAll.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonHideNamesAll.Name = "customButtonHideNamesAll";
             this.customButtonHideNamesAll.Size = new System.Drawing.Size(119, 23);
             this.customButtonHideNamesAll.TabIndex = 13;
@@ -167,7 +167,7 @@
             this.customButtonEnableAll.IsHover = false;
             this.customButtonEnableAll.IsPressed = false;
             this.customButtonEnableAll.Location = new System.Drawing.Point(395, 415);
-            this.customButtonEnableAll.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonEnableAll.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonEnableAll.Name = "customButtonEnableAll";
             this.customButtonEnableAll.Size = new System.Drawing.Size(119, 23);
             this.customButtonEnableAll.TabIndex = 12;
@@ -181,7 +181,7 @@
             this.customButtonDisableAll.IsHover = false;
             this.customButtonDisableAll.IsPressed = false;
             this.customButtonDisableAll.Location = new System.Drawing.Point(395, 440);
-            this.customButtonDisableAll.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonDisableAll.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonDisableAll.Name = "customButtonDisableAll";
             this.customButtonDisableAll.Size = new System.Drawing.Size(119, 23);
             this.customButtonDisableAll.TabIndex = 11;
@@ -195,7 +195,7 @@
             this.customButtonCollapseAll.IsHover = false;
             this.customButtonCollapseAll.IsPressed = false;
             this.customButtonCollapseAll.Location = new System.Drawing.Point(10, 440);
-            this.customButtonCollapseAll.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonCollapseAll.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonCollapseAll.Name = "customButtonCollapseAll";
             this.customButtonCollapseAll.Size = new System.Drawing.Size(119, 23);
             this.customButtonCollapseAll.TabIndex = 10;
@@ -209,7 +209,7 @@
             this.customButtonExpandAll.IsHover = false;
             this.customButtonExpandAll.IsPressed = false;
             this.customButtonExpandAll.Location = new System.Drawing.Point(10, 415);
-            this.customButtonExpandAll.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonExpandAll.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonExpandAll.Name = "customButtonExpandAll";
             this.customButtonExpandAll.Size = new System.Drawing.Size(119, 23);
             this.customButtonExpandAll.TabIndex = 9;

@@ -1,6 +1,6 @@
-﻿using EnhancedMap.Core.MapObjects;
+﻿using Spawn.Core.MapObjects;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public static class MouseManager
     {

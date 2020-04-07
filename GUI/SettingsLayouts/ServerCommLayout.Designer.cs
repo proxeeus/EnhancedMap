@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI.SettingsLayouts
+﻿namespace Spawn.GUI.SettingsLayouts
 {
     partial class ServerCommLayout
     {
@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelDescription = new System.Windows.Forms.Label();
-            this.customButtonSend = new EnhancedMap.GUI.CustomButton();
+            this.customButtonSend = new Spawn.GUI.CustomButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             this.customButtonSend.IsHover = false;
             this.customButtonSend.IsPressed = false;
             this.customButtonSend.Location = new System.Drawing.Point(238, 12);
-            this.customButtonSend.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonSend.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonSend.Name = "customButtonSend";
             this.customButtonSend.Size = new System.Drawing.Size(75, 23);
             this.customButtonSend.TabIndex = 3;

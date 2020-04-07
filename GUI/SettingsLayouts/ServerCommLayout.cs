@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using EnhancedMap.Core;
-using EnhancedMap.Core.Network;
+using Spawn.Core;
+using Spawn.Core.Network;
 
-namespace EnhancedMap.GUI.SettingsLayouts
+namespace Spawn.GUI.SettingsLayouts
 {
     public partial class ServerCommLayout : UserControl
     {

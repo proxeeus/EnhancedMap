@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public static class Geometry
     {

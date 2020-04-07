@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI.MapMakerSteps
+﻿namespace Spawn.GUI.MapMakerSteps
 {
     partial class OriginalMapStep
     {
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.customButtonGenerate = new EnhancedMap.GUI.CustomButton();
-            this.customButtonDownload = new EnhancedMap.GUI.CustomButton();
-            this.customFlatButtonBack = new EnhancedMap.GUI.CustomFlatButton();
+            this.customButtonGenerate = new Spawn.GUI.CustomButton();
+            this.customButtonDownload = new Spawn.GUI.CustomButton();
+            this.customFlatButtonBack = new Spawn.GUI.CustomFlatButton();
             this.SuspendLayout();
             // 
             // customButtonGenerate
@@ -40,7 +40,7 @@
             this.customButtonGenerate.IsHover = false;
             this.customButtonGenerate.IsPressed = false;
             this.customButtonGenerate.Location = new System.Drawing.Point(12, 125);
-            this.customButtonGenerate.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonGenerate.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonGenerate.Name = "customButtonGenerate";
             this.customButtonGenerate.Size = new System.Drawing.Size(437, 90);
             this.customButtonGenerate.TabIndex = 2;
@@ -54,7 +54,7 @@
             this.customButtonDownload.IsHover = false;
             this.customButtonDownload.IsPressed = false;
             this.customButtonDownload.Location = new System.Drawing.Point(11, 29);
-            this.customButtonDownload.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonDownload.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonDownload.Name = "customButtonDownload";
             this.customButtonDownload.Size = new System.Drawing.Size(438, 90);
             this.customButtonDownload.TabIndex = 1;
@@ -71,7 +71,7 @@
             this.customFlatButtonBack.IsSelected = false;
             this.customFlatButtonBack.Location = new System.Drawing.Point(10, 299);
             this.customFlatButtonBack.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.customFlatButtonBack.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonBack.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonBack.Name = "customFlatButtonBack";
             this.customFlatButtonBack.Size = new System.Drawing.Size(75, 27);
             this.customFlatButtonBack.TabIndex = 0;

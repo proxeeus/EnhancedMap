@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace EnhancedMap.GUI.Animations
+namespace Spawn.GUI.Animations
 {
     internal class AnimationManager
     {

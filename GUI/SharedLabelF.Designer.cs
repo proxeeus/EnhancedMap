@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI
+﻿namespace Spawn.GUI
 {
     partial class SharedLabelF
     {
@@ -36,7 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.customButtonSend = new EnhancedMap.GUI.CustomButton();
+            this.customButtonSend = new Spawn.GUI.CustomButton();
             this.SuspendLayout();
             // 
             // numericTextBoxX
@@ -123,7 +123,7 @@
             this.customButtonSend.IsHover = false;
             this.customButtonSend.IsPressed = false;
             this.customButtonSend.Location = new System.Drawing.Point(115, 192);
-            this.customButtonSend.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonSend.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonSend.Name = "customButtonSend";
             this.customButtonSend.Size = new System.Drawing.Size(100, 26);
             this.customButtonSend.TabIndex = 8;

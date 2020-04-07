@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
-using EnhancedMap.Core.Network.Packets;
+using Spawn.Core.Network.Packets;
 
-namespace EnhancedMap.Core.Network
+namespace Spawn.Core.Network
 {
     public sealed class PSharedLabel : PacketWriter
     {

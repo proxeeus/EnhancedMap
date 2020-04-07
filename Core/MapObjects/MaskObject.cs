@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
-using EnhancedMap.Core.Network;
-using EnhancedMap.Properties;
+using Spawn.Core.Network;
+using Spawn.Properties;
 
-namespace EnhancedMap.Core.MapObjects
+namespace Spawn.Core.MapObjects
 {
     public class ZoomMask : RenderObject
     {

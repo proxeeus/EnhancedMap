@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI.SettingsLayouts
+﻿namespace Spawn.GUI.SettingsLayouts
 {
     partial class ApplicationLayout
     {
@@ -38,16 +38,16 @@
             this.radioButtonClassic = new System.Windows.Forms.RadioButton();
             this.radioButtonOrion = new System.Windows.Forms.RadioButton();
             this.textBoxClientPath = new System.Windows.Forms.TextBox();
-            this.customButtonClientPath = new EnhancedMap.GUI.CustomButton();
+            this.customButtonClientPath = new Spawn.GUI.CustomButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.customButtonRebuildMaps = new EnhancedMap.GUI.CustomButton();
+            this.customButtonRebuildMaps = new Spawn.GUI.CustomButton();
             this.checkBoxFollowUOstate = new System.Windows.Forms.CheckBox();
             this.comboBoxClientNum = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.customButtonRefreshClients = new EnhancedMap.GUI.CustomButton();
+            this.customButtonRefreshClients = new Spawn.GUI.CustomButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.customFlatButtonCheckNewVersion = new EnhancedMap.GUI.CustomFlatButton();
+            this.customFlatButtonCheckNewVersion = new Spawn.GUI.CustomFlatButton();
             this.checkBoxLoadMapsOnDemand = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDownFPS = new System.Windows.Forms.NumericUpDown();
@@ -171,7 +171,7 @@
             this.customButtonClientPath.IsHover = false;
             this.customButtonClientPath.IsPressed = false;
             this.customButtonClientPath.Location = new System.Drawing.Point(473, 369);
-            this.customButtonClientPath.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonClientPath.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonClientPath.Name = "customButtonClientPath";
             this.customButtonClientPath.Size = new System.Drawing.Size(33, 21);
             this.customButtonClientPath.TabIndex = 12;
@@ -196,7 +196,7 @@
             this.customButtonRebuildMaps.IsHover = false;
             this.customButtonRebuildMaps.IsPressed = false;
             this.customButtonRebuildMaps.Location = new System.Drawing.Point(352, 20);
-            this.customButtonRebuildMaps.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonRebuildMaps.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonRebuildMaps.Name = "customButtonRebuildMaps";
             this.customButtonRebuildMaps.Size = new System.Drawing.Size(122, 44);
             this.customButtonRebuildMaps.TabIndex = 14;
@@ -236,11 +236,11 @@
             // 
             this.customButtonRefreshClients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.customButtonRefreshClients.ForceHover = false;
-            this.customButtonRefreshClients.Image = global::EnhancedMap.Properties.Resources.refresh_icon;
+            this.customButtonRefreshClients.Image = global::Spawn.Properties.Resources.refresh_icon;
             this.customButtonRefreshClients.IsHover = false;
             this.customButtonRefreshClients.IsPressed = false;
             this.customButtonRefreshClients.Location = new System.Drawing.Point(473, 416);
-            this.customButtonRefreshClients.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonRefreshClients.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonRefreshClients.Name = "customButtonRefreshClients";
             this.customButtonRefreshClients.Size = new System.Drawing.Size(33, 23);
             this.customButtonRefreshClients.TabIndex = 18;
@@ -282,7 +282,7 @@
             this.customFlatButtonCheckNewVersion.IsSelected = false;
             this.customFlatButtonCheckNewVersion.Location = new System.Drawing.Point(195, 448);
             this.customFlatButtonCheckNewVersion.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.customFlatButtonCheckNewVersion.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonCheckNewVersion.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonCheckNewVersion.Name = "customFlatButtonCheckNewVersion";
             this.customFlatButtonCheckNewVersion.Size = new System.Drawing.Size(123, 23);
             this.customFlatButtonCheckNewVersion.TabIndex = 21;

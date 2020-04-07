@@ -2,7 +2,7 @@
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public static class OEUO_Manager
     {

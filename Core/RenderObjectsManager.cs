@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using EnhancedMap.Core.MapObjects;
-using EnhancedMap.Core.Network;
+using Spawn.Core.MapObjects;
+using Spawn.Core.Network;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public enum LAYER_ORDER
     {

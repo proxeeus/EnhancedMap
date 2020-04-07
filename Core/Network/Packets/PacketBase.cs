@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EnhancedMap.Core.Network.Packets
+namespace Spawn.Core.Network.Packets
 {
     public abstract class PacketBase
     {

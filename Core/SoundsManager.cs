@@ -1,7 +1,7 @@
 ﻿using System.Media;
-using EnhancedMap.Properties;
+using Spawn.Properties;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public enum SOUNDS_TYPE
     {

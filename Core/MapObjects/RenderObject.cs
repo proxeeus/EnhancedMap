@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace EnhancedMap.Core.MapObjects
+namespace Spawn.Core.MapObjects
 {
     public interface IRenderObject : IDisposable
     {

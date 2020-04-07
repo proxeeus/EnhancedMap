@@ -1,5 +1,5 @@
-﻿using EnhancedMap.Core;
-using EnhancedMap.Core.MapObjects;
+﻿using Spawn.Core;
+using Spawn.Core.MapObjects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EnhancedMap.GUI
+namespace Spawn.GUI
 {
     public partial class SpawnEntryWindow : Form
     {

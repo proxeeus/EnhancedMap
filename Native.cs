@@ -10,7 +10,7 @@ using System.Security;
 using System.Text;
 using Microsoft.Win32.SafeHandles;
 
-namespace EnhancedMap
+namespace Spawn
 {
     public static class Native
     {

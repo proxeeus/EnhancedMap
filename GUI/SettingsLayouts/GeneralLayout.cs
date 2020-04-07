@@ -1,9 +1,9 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
-using EnhancedMap.Core;
+using Spawn.Core;
 
-namespace EnhancedMap.GUI.SettingsLayouts
+namespace Spawn.GUI.SettingsLayouts
 {
     public partial class GeneralLayout : UserControl
     {

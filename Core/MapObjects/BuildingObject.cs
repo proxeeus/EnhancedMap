@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace EnhancedMap.Core.MapObjects
+namespace Spawn.Core.MapObjects
 {
     public class BuildingObject : RenderObject
     {

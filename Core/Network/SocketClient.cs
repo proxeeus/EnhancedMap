@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
-using EnhancedMap.Core.Network.Packets;
+using Spawn.Core.Network.Packets;
 
-namespace EnhancedMap.Core.Network
+namespace Spawn.Core.Network
 {
     public enum ConnectionStatus
     {

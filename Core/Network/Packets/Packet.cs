@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace EnhancedMap.Core.Network.Packets
+namespace Spawn.Core.Network.Packets
 {
     public sealed class Packet : PacketBase
     {

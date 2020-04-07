@@ -6,9 +6,9 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
-using EnhancedMap.Diagnostic;
+using Spawn.Diagnostic;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public enum MSG_RECV
     {

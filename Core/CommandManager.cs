@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using EnhancedMap.Core.MapObjects;
-using EnhancedMap.Core.Network;
-using EnhancedMap.Diagnostic;
+using Spawn.Core.MapObjects;
+using Spawn.Core.Network;
+using Spawn.Diagnostic;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public static class CommandManager
     {

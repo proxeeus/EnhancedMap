@@ -4,11 +4,11 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml;
-using EnhancedMap.Core;
-using EnhancedMap.Diagnostic;
-using EnhancedMap.GUI.SettingsLayouts;
+using Spawn.Core;
+using Spawn.Diagnostic;
+using Spawn.GUI.SettingsLayouts;
 
-namespace EnhancedMap.GUI
+namespace Spawn.GUI
 {
     public partial class Settings : CustomForm
     {

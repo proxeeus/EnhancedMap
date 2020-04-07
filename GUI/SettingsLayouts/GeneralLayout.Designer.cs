@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI.SettingsLayouts
+﻿namespace Spawn.GUI.SettingsLayouts
 {
     partial class GeneralLayout
     {
@@ -51,8 +51,8 @@
             this.trackBarNamePosition = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxDontRenderUsersDiffFacet = new System.Windows.Forms.CheckBox();
-            this.customButtonSetNameFont = new EnhancedMap.GUI.CustomButton();
-            this.customButtonSetNameHue = new EnhancedMap.GUI.CustomButton();
+            this.customButtonSetNameFont = new Spawn.GUI.CustomButton();
+            this.customButtonSetNameHue = new Spawn.GUI.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMapEx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarNamePosition)).BeginInit();
             this.SuspendLayout();
@@ -252,7 +252,7 @@
             // pictureBoxMapEx
             // 
             this.pictureBoxMapEx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxMapEx.Image = global::EnhancedMap.Properties.Resources.mapExNormal;
+            this.pictureBoxMapEx.Image = global::Spawn.Properties.Resources.mapExNormal;
             this.pictureBoxMapEx.Location = new System.Drawing.Point(218, 263);
             this.pictureBoxMapEx.Name = "pictureBoxMapEx";
             this.pictureBoxMapEx.Size = new System.Drawing.Size(287, 210);
@@ -295,7 +295,7 @@
             this.customButtonSetNameFont.IsHover = false;
             this.customButtonSetNameFont.IsPressed = false;
             this.customButtonSetNameFont.Location = new System.Drawing.Point(14, 450);
-            this.customButtonSetNameFont.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonSetNameFont.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonSetNameFont.Name = "customButtonSetNameFont";
             this.customButtonSetNameFont.Size = new System.Drawing.Size(198, 23);
             this.customButtonSetNameFont.TabIndex = 20;
@@ -309,7 +309,7 @@
             this.customButtonSetNameHue.IsHover = false;
             this.customButtonSetNameHue.IsPressed = false;
             this.customButtonSetNameHue.Location = new System.Drawing.Point(14, 421);
-            this.customButtonSetNameHue.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonSetNameHue.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonSetNameHue.Name = "customButtonSetNameHue";
             this.customButtonSetNameHue.Size = new System.Drawing.Size(198, 23);
             this.customButtonSetNameHue.TabIndex = 19;

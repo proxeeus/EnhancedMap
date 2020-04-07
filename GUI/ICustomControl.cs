@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI
+﻿namespace Spawn.GUI
 {
     public enum MouseState
     {

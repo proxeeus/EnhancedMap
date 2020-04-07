@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using EnhancedMap.GUI.Animations;
+using Spawn.GUI.Animations;
 
-namespace EnhancedMap.Core.MapObjects
+namespace Spawn.Core.MapObjects
 {
     public class SignalObject : RenderObject
     {

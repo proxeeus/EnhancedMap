@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI
+﻿namespace Spawn.GUI
 {
     partial class PlacesEditorF
     {
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.customFlatButtonAdd = new EnhancedMap.GUI.CustomFlatButton();
-            this.customFlatButtonCancel = new EnhancedMap.GUI.CustomFlatButton();
+            this.customFlatButtonAdd = new Spawn.GUI.CustomFlatButton();
+            this.customFlatButtonCancel = new Spawn.GUI.CustomFlatButton();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.ComboBoxFacet = new System.Windows.Forms.ComboBox();
@@ -55,7 +55,7 @@
             this.customFlatButtonAdd.IsSelected = false;
             this.customFlatButtonAdd.Location = new System.Drawing.Point(300, 223);
             this.customFlatButtonAdd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.customFlatButtonAdd.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonAdd.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonAdd.Name = "customFlatButtonAdd";
             this.customFlatButtonAdd.Size = new System.Drawing.Size(55, 23);
             this.customFlatButtonAdd.TabIndex = 0;
@@ -73,7 +73,7 @@
             this.customFlatButtonCancel.IsSelected = false;
             this.customFlatButtonCancel.Location = new System.Drawing.Point(237, 223);
             this.customFlatButtonCancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.customFlatButtonCancel.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonCancel.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonCancel.Name = "customFlatButtonCancel";
             this.customFlatButtonCancel.Size = new System.Drawing.Size(55, 23);
             this.customFlatButtonCancel.TabIndex = 1;

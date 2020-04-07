@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EnhancedMap
+namespace Spawn
 {
     public sealed class CircularBuffer
     {

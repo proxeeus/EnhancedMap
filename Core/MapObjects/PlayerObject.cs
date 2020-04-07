@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
-using EnhancedMap.Core.Network;
+using Spawn.Core.Network;
 
-namespace EnhancedMap.Core.MapObjects
+namespace Spawn.Core.MapObjects
 {
     public class PlayerObject : UserObject, IMessageFilter
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EnhancedMap.GUI.Animations
+namespace Spawn.GUI.Animations
 {
     internal enum AnimationType
     {

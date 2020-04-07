@@ -4,7 +4,7 @@ using System.IO;
 using System.Net;
 using System.Windows.Forms;
 
-namespace EnhancedMap.Core.Network
+namespace Spawn.Core.Network
 {
     public class Update
     {
@@ -111,7 +111,7 @@ namespace EnhancedMap.Core.Network
                            {
                                StartInfo =
                                 {
-                                    FileName = Path.Combine(pathtoextract, "EnhancedMap.exe"),
+                                    FileName = Path.Combine(pathtoextract, "Spawn.exe"),
                                     UseShellExecute = false,
                                     Arguments =
                                         $"--source \"{Application.ExecutablePath}\" --pid {Process.GetCurrentProcess().Id} --action update"
@@ -165,7 +165,7 @@ namespace EnhancedMap.Core.Network
                                 MessageBox.Show("EnhancedUpdater not found.", "Error");
                         }
                     }
-                    else Console.WriteLine("EnhancedMap is already running latest version.");
+                    else Console.WriteLine("Spawn is already running latest version.");
                 }
                 catch
                 {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using EnhancedMap.Core.MapObjects;
+using Spawn.Core.MapObjects;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public class GameHouse
     {

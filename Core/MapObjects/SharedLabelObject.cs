@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
-using EnhancedMap.Properties;
+using Spawn.Properties;
 
-namespace EnhancedMap.Core.MapObjects
+namespace Spawn.Core.MapObjects
 {
     public class SharedLabelObject : RenderObject
     {

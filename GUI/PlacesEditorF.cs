@@ -1,10 +1,10 @@
 ﻿using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using EnhancedMap.Core;
-using EnhancedMap.Core.MapObjects;
+using Spawn.Core;
+using Spawn.Core.MapObjects;
 
-namespace EnhancedMap.GUI
+namespace Spawn.GUI
 {
     public partial class PlacesEditorF : CustomForm
     {

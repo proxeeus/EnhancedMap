@@ -6,12 +6,12 @@ using System.Reflection;
 using System.Security.Principal;
 using System.Threading;
 using System.Windows.Forms;
-using EnhancedMap.Core;
-using EnhancedMap.Core.Network;
-using EnhancedMap.GUI;
+using Spawn.Core;
+using Spawn.Core.Network;
+using Spawn.GUI;
 using Microsoft.Win32;
 
-namespace EnhancedMap
+namespace Spawn
 {
     public static class MainCore
     {
@@ -28,13 +28,13 @@ namespace EnhancedMap
         {
             if (!IsUserAdministrator())
             {
-                MessageBox.Show("EnhancedMap requires administrator privileges to run.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Spawn requires administrator privileges to run.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (!CheckNet45Installed())
             {
-                if (MessageBox.Show("EnhancedMap requires .Net Framework 4.6.2 to run.\r\nPress OK to download.", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                if (MessageBox.Show("Spawn requires .Net Framework 4.6.2 to run.\r\nPress OK to download.", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                     Process.Start("https://www.microsoft.com/en-us/download/details.aspx?id=53344");
             }
             else

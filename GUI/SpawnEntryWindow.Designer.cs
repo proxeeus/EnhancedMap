@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI
+﻿namespace Spawn.GUI
 {
     partial class SpawnEntryWindow
     {

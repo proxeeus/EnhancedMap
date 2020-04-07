@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI
+﻿namespace Spawn.GUI
 {
     partial class CoordsConverterF
     {
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.customFlatButtonSwitch = new EnhancedMap.GUI.CustomFlatButton();
+            this.customFlatButtonSwitch = new Spawn.GUI.CustomFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.customButtonReset = new EnhancedMap.GUI.CustomButton();
-            this.customButtonGo = new EnhancedMap.GUI.CustomButton();
+            this.customButtonReset = new Spawn.GUI.CustomButton();
+            this.customButtonGo = new Spawn.GUI.CustomButton();
             this.SuspendLayout();
             // 
             // customFlatButtonSwitch
@@ -46,7 +46,7 @@
             this.customFlatButtonSwitch.IsSelected = false;
             this.customFlatButtonSwitch.Location = new System.Drawing.Point(14, 147);
             this.customFlatButtonSwitch.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.customFlatButtonSwitch.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonSwitch.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonSwitch.Name = "customFlatButtonSwitch";
             this.customFlatButtonSwitch.Size = new System.Drawing.Size(104, 29);
             this.customFlatButtonSwitch.TabIndex = 0;
@@ -67,7 +67,7 @@
             this.customButtonReset.IsHover = false;
             this.customButtonReset.IsPressed = false;
             this.customButtonReset.Location = new System.Drawing.Point(189, 147);
-            this.customButtonReset.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonReset.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonReset.Name = "customButtonReset";
             this.customButtonReset.Size = new System.Drawing.Size(58, 29);
             this.customButtonReset.TabIndex = 2;
@@ -81,7 +81,7 @@
             this.customButtonGo.IsHover = false;
             this.customButtonGo.IsPressed = false;
             this.customButtonGo.Location = new System.Drawing.Point(253, 147);
-            this.customButtonGo.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonGo.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonGo.Name = "customButtonGo";
             this.customButtonGo.Size = new System.Drawing.Size(58, 29);
             this.customButtonGo.TabIndex = 3;

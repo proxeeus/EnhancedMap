@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI.SettingsLayouts
+﻿namespace Spawn.GUI.SettingsLayouts
 {
     partial class DiagnosticLayout
     {
@@ -31,7 +31,7 @@
             this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.checkBoxAutoScroll = new System.Windows.Forms.CheckBox();
             this.labelData = new System.Windows.Forms.Label();
-            this.customButtonSaveLog = new EnhancedMap.GUI.CustomButton();
+            this.customButtonSaveLog = new Spawn.GUI.CustomButton();
             this.SuspendLayout();
             // 
             // richTextBox
@@ -75,7 +75,7 @@
             this.customButtonSaveLog.IsHover = false;
             this.customButtonSaveLog.IsPressed = false;
             this.customButtonSaveLog.Location = new System.Drawing.Point(398, 3);
-            this.customButtonSaveLog.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonSaveLog.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonSaveLog.Name = "customButtonSaveLog";
             this.customButtonSaveLog.Size = new System.Drawing.Size(123, 23);
             this.customButtonSaveLog.TabIndex = 1;

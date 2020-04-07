@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using EnhancedMap.Core;
+using Spawn.Core;
 
-namespace EnhancedMap.GUI.MapMakerSteps
+namespace Spawn.GUI.MapMakerSteps
 {
     public partial class OriginalMapStep : UserControl
     {

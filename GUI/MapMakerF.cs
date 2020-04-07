@@ -4,10 +4,10 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using EnhancedMap.Core;
-using EnhancedMap.GUI.MapMakerSteps;
+using Spawn.Core;
+using Spawn.GUI.MapMakerSteps;
 
-namespace EnhancedMap.GUI
+namespace Spawn.GUI
 {
     public partial class MapMakerF : CustomForm
     {

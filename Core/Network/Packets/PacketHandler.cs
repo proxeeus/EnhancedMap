@@ -1,7 +1,7 @@
 ﻿using System;
-using EnhancedMap.Core.Network.Packets;
+using Spawn.Core.Network.Packets;
 
-namespace EnhancedMap.Core.Network
+namespace Spawn.Core.Network
 {
     /*public delegate void OnPacketReceive(PacketReader pvSrc);
 

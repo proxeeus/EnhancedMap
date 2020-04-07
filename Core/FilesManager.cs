@@ -6,9 +6,9 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using EnhancedMap.Core.MapObjects;
+using Spawn.Core.MapObjects;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public class BuildSet
     {

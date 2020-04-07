@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace EnhancedMap.GUI.MapMakerSteps
+namespace Spawn.GUI.MapMakerSteps
 {
     public partial class KindClientStep : UserControl
     {

@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI.SettingsLayouts
+﻿namespace Spawn.GUI.SettingsLayouts
 {
     partial class AboutLayout
     {
@@ -56,7 +56,7 @@
             this.linkLabel1.Size = new System.Drawing.Size(223, 15);
             this.linkLabel1.TabIndex = 1;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "EnhancedMap - Official Facebook page";
+            this.linkLabel1.Text = "Spawn - Official Facebook page";
             this.linkLabel1.Visible = false;
             // 
             // linkLabel2
@@ -114,7 +114,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::EnhancedMap.Properties.Resources.facebook_256;
+            this.pictureBox2.Image = global::Spawn.Properties.Resources.facebook_256;
             this.pictureBox2.Location = new System.Drawing.Point(15, 277);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
@@ -125,7 +125,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::EnhancedMap.Properties.Resources.discord;
+            this.pictureBox3.Image = global::Spawn.Properties.Resources.discord;
             this.pictureBox3.Location = new System.Drawing.Point(12, 238);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
@@ -135,7 +135,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EnhancedMap.Properties.Resources.backgroundEM;
+            this.pictureBox1.Image = global::Spawn.Properties.Resources.backgroundEM;
             this.pictureBox1.Location = new System.Drawing.Point(15, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(493, 133);

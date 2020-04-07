@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace EnhancedMap.GUI.SettingsLayouts
+namespace Spawn.GUI.SettingsLayouts
 {
     public partial class AboutLayout : UserControl
     {

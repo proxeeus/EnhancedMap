@@ -1,9 +1,9 @@
-﻿using EnhancedMap.Core.MapObjects;
+﻿using Spawn.Core.MapObjects;
 using System.ComponentModel;
 using System.IO;
 
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public class SpawnWriter
     {

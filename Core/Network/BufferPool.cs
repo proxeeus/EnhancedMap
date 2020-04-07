@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EnhancedMap.Core.Network
+namespace Spawn.Core.Network
 {
     public class BufferPool
     {

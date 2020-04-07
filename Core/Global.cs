@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using EnhancedMap.Core.MapObjects;
-using EnhancedMap.GUI;
+using Spawn.Core.MapObjects;
+using Spawn.GUI;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public class OnMapChangedEventArgs : EventArgs
     {

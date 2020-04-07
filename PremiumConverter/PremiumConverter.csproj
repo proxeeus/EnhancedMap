@@ -52,9 +52,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EnhancedMap.csproj">
+    <ProjectReference Include="..\Spawn.csproj">
       <Project>{803b7e52-1642-473e-96b3-87a037df1e0a}</Project>
-      <Name>EnhancedMap</Name>
+      <Name>Spawn</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

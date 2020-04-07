@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using EnhancedMap.Core.MapObjects;
-using EnhancedMap.Core.Network.Packets;
+using Spawn.Core.MapObjects;
+using Spawn.Core.Network.Packets;
 
-namespace EnhancedMap.Core.Network
+namespace Spawn.Core.Network
 {
     public enum ServerMessageType
     {

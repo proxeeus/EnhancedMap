@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public static class Utility
     {

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set di attributi. Modificare i valori di questi attributi per modificare le informazioni
 // associate a un assembly.
 
-[assembly: AssemblyTitle("EnhancedMap")]
+[assembly: AssemblyTitle("Spawn")]
 [assembly: AssemblyDescription("A new mapping tool for UO")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EnhancedMap")]
+[assembly: AssemblyProduct("Spawn")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

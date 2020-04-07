@@ -4,9 +4,9 @@ using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EnhancedMap.Core;
+using Spawn.Core;
 
-namespace EnhancedMap.GUI.MapMakerSteps
+namespace Spawn.GUI.MapMakerSteps
 {
     public partial class CreationMapsStep : UserControl
     {

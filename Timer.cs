@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace EnhancedMap
+namespace Spawn
 {
     public static class TimerManager
     {

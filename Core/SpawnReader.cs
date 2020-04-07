@@ -1,4 +1,4 @@
-﻿using EnhancedMap.Core.MapObjects;
+﻿using Spawn.Core.MapObjects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnhancedMap.Core
+namespace Spawn.Core
 {
     public class SpawnReader
     {

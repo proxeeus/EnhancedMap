@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace EnhancedMap.GUI
+namespace Spawn.GUI
 {
     public class CustomForm : Form, ICustomControl
     {

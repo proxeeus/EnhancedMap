@@ -1,12 +1,12 @@
 ﻿using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using EnhancedMap.Core;
-using EnhancedMap.Core.MapObjects;
-using EnhancedMap.Core.Network;
-using EnhancedMap.Diagnostic;
+using Spawn.Core;
+using Spawn.Core.MapObjects;
+using Spawn.Core.Network;
+using Spawn.Diagnostic;
 
-namespace EnhancedMap.GUI
+namespace Spawn.GUI
 {
     public partial class ChatF : CustomForm
     {

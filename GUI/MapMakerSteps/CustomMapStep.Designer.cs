@@ -1,4 +1,4 @@
-﻿namespace EnhancedMap.GUI.MapMakerSteps
+﻿namespace Spawn.GUI.MapMakerSteps
 {
     partial class CustomMapStep
     {
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.customFlatButtonBack = new EnhancedMap.GUI.CustomFlatButton();
+            this.customFlatButtonBack = new Spawn.GUI.CustomFlatButton();
             this.listViewMaps = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,14 +37,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.customButtonRemove = new EnhancedMap.GUI.CustomButton();
-            this.customButtonAdd = new EnhancedMap.GUI.CustomButton();
+            this.customButtonRemove = new Spawn.GUI.CustomButton();
+            this.customButtonAdd = new Spawn.GUI.CustomButton();
             this.numericUpDownHeight = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownWidth = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDownIndex = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.customButtonGenerate = new EnhancedMap.GUI.CustomButton();
+            this.customButtonGenerate = new Spawn.GUI.CustomButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).BeginInit();
@@ -62,7 +62,7 @@
             this.customFlatButtonBack.IsSelected = false;
             this.customFlatButtonBack.Location = new System.Drawing.Point(5, 299);
             this.customFlatButtonBack.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.customFlatButtonBack.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customFlatButtonBack.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customFlatButtonBack.Name = "customFlatButtonBack";
             this.customFlatButtonBack.Size = new System.Drawing.Size(75, 27);
             this.customFlatButtonBack.TabIndex = 1;
@@ -152,7 +152,7 @@
             this.customButtonRemove.IsHover = false;
             this.customButtonRemove.IsPressed = false;
             this.customButtonRemove.Location = new System.Drawing.Point(364, 93);
-            this.customButtonRemove.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonRemove.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonRemove.Name = "customButtonRemove";
             this.customButtonRemove.Size = new System.Drawing.Size(86, 27);
             this.customButtonRemove.TabIndex = 16;
@@ -166,7 +166,7 @@
             this.customButtonAdd.IsHover = false;
             this.customButtonAdd.IsPressed = false;
             this.customButtonAdd.Location = new System.Drawing.Point(273, 93);
-            this.customButtonAdd.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonAdd.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonAdd.Name = "customButtonAdd";
             this.customButtonAdd.Size = new System.Drawing.Size(86, 27);
             this.customButtonAdd.TabIndex = 15;
@@ -236,7 +236,7 @@
             this.customButtonGenerate.IsHover = false;
             this.customButtonGenerate.IsPressed = false;
             this.customButtonGenerate.Location = new System.Drawing.Point(5, 254);
-            this.customButtonGenerate.MouseState = EnhancedMap.GUI.MouseState.HOVER;
+            this.customButtonGenerate.MouseState = Spawn.GUI.MouseState.HOVER;
             this.customButtonGenerate.Name = "customButtonGenerate";
             this.customButtonGenerate.Size = new System.Drawing.Size(453, 35);
             this.customButtonGenerate.TabIndex = 14;

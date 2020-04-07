@@ -2,9 +2,9 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Aga.Controls;
-using EnhancedMap.Core;
+using Spawn.Core;
 
-namespace EnhancedMap.GUI
+namespace Spawn.GUI
 {
     public partial class CoordsConverterF : CustomForm
     {
