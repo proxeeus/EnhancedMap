@@ -6,7 +6,7 @@ Please see the original project @ https://github.com/andreakarasho/EnhancedMap i
 
 # Purpose
 
-The purpose of this application is to have a visual tool that'll help server administrators implementing spawns across their UO worlds.
+The purpose of this application is to have a visual tool that'll help server administrators implement spawns across their UO worlds.
 
 # Building the code
 
