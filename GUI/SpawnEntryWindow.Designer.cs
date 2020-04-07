@@ -58,94 +58,105 @@
             // mobilesTreeView
             // 
             this.mobilesTreeView.HideSelection = false;
-            this.mobilesTreeView.Location = new System.Drawing.Point(12, 12);
+            this.mobilesTreeView.Location = new System.Drawing.Point(16, 15);
+            this.mobilesTreeView.Margin = new System.Windows.Forms.Padding(4);
             this.mobilesTreeView.Name = "mobilesTreeView";
-            this.mobilesTreeView.Size = new System.Drawing.Size(230, 449);
+            this.mobilesTreeView.Size = new System.Drawing.Size(305, 552);
             this.mobilesTreeView.TabIndex = 0;
             this.mobilesTreeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.mobilesTreeView_NodeMouseDoubleClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 39);
+            this.label1.Location = new System.Drawing.Point(77, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "NPC Count:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 62);
+            this.label2.Location = new System.Drawing.Point(69, 76);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.Size = new System.Drawing.Size(90, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Home range:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 85);
+            this.label4.Location = new System.Drawing.Point(95, 105);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(64, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Min time:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(66, 107);
+            this.label5.Location = new System.Drawing.Point(88, 132);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(67, 17);
             this.label5.TabIndex = 5;
             this.label5.Text = "Max time:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(81, 130);
+            this.label6.Location = new System.Drawing.Point(108, 160);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.Size = new System.Drawing.Size(48, 17);
             this.label6.TabIndex = 6;
             this.label6.Text = "Team:";
             // 
             // npcCountTextBox
             // 
-            this.npcCountTextBox.Location = new System.Drawing.Point(127, 39);
+            this.npcCountTextBox.Location = new System.Drawing.Point(169, 48);
+            this.npcCountTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.npcCountTextBox.Name = "npcCountTextBox";
-            this.npcCountTextBox.Size = new System.Drawing.Size(100, 20);
+            this.npcCountTextBox.Size = new System.Drawing.Size(132, 22);
             this.npcCountTextBox.TabIndex = 7;
             this.npcCountTextBox.Text = "1";
             // 
             // homeRangeTextBox
             // 
-            this.homeRangeTextBox.Location = new System.Drawing.Point(127, 62);
+            this.homeRangeTextBox.Location = new System.Drawing.Point(169, 76);
+            this.homeRangeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.homeRangeTextBox.Name = "homeRangeTextBox";
-            this.homeRangeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.homeRangeTextBox.Size = new System.Drawing.Size(132, 22);
             this.homeRangeTextBox.TabIndex = 8;
             this.homeRangeTextBox.Text = "5";
             // 
             // minTimeTextBox
             // 
-            this.minTimeTextBox.Location = new System.Drawing.Point(127, 85);
+            this.minTimeTextBox.Location = new System.Drawing.Point(169, 105);
+            this.minTimeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.minTimeTextBox.Name = "minTimeTextBox";
-            this.minTimeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.minTimeTextBox.Size = new System.Drawing.Size(132, 22);
             this.minTimeTextBox.TabIndex = 10;
             this.minTimeTextBox.Text = "2.5";
             // 
             // maxTimeTextBox
             // 
-            this.maxTimeTextBox.Location = new System.Drawing.Point(127, 107);
+            this.maxTimeTextBox.Location = new System.Drawing.Point(169, 132);
+            this.maxTimeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.maxTimeTextBox.Name = "maxTimeTextBox";
-            this.maxTimeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.maxTimeTextBox.Size = new System.Drawing.Size(132, 22);
             this.maxTimeTextBox.TabIndex = 11;
             this.maxTimeTextBox.Text = "10.0";
             // 
             // teamTextBox
             // 
-            this.teamTextBox.Location = new System.Drawing.Point(127, 130);
+            this.teamTextBox.Location = new System.Drawing.Point(169, 160);
+            this.teamTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.teamTextBox.Name = "teamTextBox";
-            this.teamTextBox.Size = new System.Drawing.Size(100, 20);
+            this.teamTextBox.Size = new System.Drawing.Size(132, 22);
             this.teamTextBox.TabIndex = 12;
             this.teamTextBox.Text = "0";
             // 
@@ -155,9 +166,10 @@
             this.bringToHomeCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bringToHomeCheckBox.Checked = true;
             this.bringToHomeCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.bringToHomeCheckBox.Location = new System.Drawing.Point(134, 156);
+            this.bringToHomeCheckBox.Location = new System.Drawing.Point(179, 192);
+            this.bringToHomeCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.bringToHomeCheckBox.Name = "bringToHomeCheckBox";
-            this.bringToHomeCheckBox.Size = new System.Drawing.Size(93, 17);
+            this.bringToHomeCheckBox.Size = new System.Drawing.Size(120, 21);
             this.bringToHomeCheckBox.TabIndex = 13;
             this.bringToHomeCheckBox.Text = "Bring to Home";
             this.bringToHomeCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -165,33 +177,38 @@
             // 
             // mobileTypeNameTextBox
             // 
-            this.mobileTypeNameTextBox.Location = new System.Drawing.Point(127, 214);
+            this.mobileTypeNameTextBox.Location = new System.Drawing.Point(169, 263);
+            this.mobileTypeNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.mobileTypeNameTextBox.Name = "mobileTypeNameTextBox";
-            this.mobileTypeNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.mobileTypeNameTextBox.Size = new System.Drawing.Size(132, 22);
             this.mobileTypeNameTextBox.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(80, 16);
+            this.label3.Location = new System.Drawing.Point(107, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 14;
             this.label3.Text = "Name:";
             // 
             // spawnMobilesListBox
             // 
             this.spawnMobilesListBox.FormattingEnabled = true;
-            this.spawnMobilesListBox.Location = new System.Drawing.Point(15, 269);
+            this.spawnMobilesListBox.ItemHeight = 16;
+            this.spawnMobilesListBox.Location = new System.Drawing.Point(20, 331);
+            this.spawnMobilesListBox.Margin = new System.Windows.Forms.Padding(4);
             this.spawnMobilesListBox.Name = "spawnMobilesListBox";
-            this.spawnMobilesListBox.Size = new System.Drawing.Size(212, 173);
+            this.spawnMobilesListBox.Size = new System.Drawing.Size(281, 212);
             this.spawnMobilesListBox.TabIndex = 16;
             // 
             // addMobileTypeButton
             // 
-            this.addMobileTypeButton.Location = new System.Drawing.Point(152, 240);
+            this.addMobileTypeButton.Location = new System.Drawing.Point(203, 295);
+            this.addMobileTypeButton.Margin = new System.Windows.Forms.Padding(4);
             this.addMobileTypeButton.Name = "addMobileTypeButton";
-            this.addMobileTypeButton.Size = new System.Drawing.Size(75, 23);
+            this.addMobileTypeButton.Size = new System.Drawing.Size(100, 28);
             this.addMobileTypeButton.TabIndex = 17;
             this.addMobileTypeButton.Text = "Add";
             this.addMobileTypeButton.UseVisualStyleBackColor = true;
@@ -200,17 +217,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 217);
+            this.label7.Location = new System.Drawing.Point(16, 267);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 13);
+            this.label7.Size = new System.Drawing.Size(144, 17);
             this.label7.TabIndex = 18;
             this.label7.Text = "Add a Mobile by type:";
             // 
             // spawnNameTextBox
             // 
-            this.spawnNameTextBox.Location = new System.Drawing.Point(127, 16);
+            this.spawnNameTextBox.Location = new System.Drawing.Point(169, 20);
+            this.spawnNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.spawnNameTextBox.Name = "spawnNameTextBox";
-            this.spawnNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.spawnNameTextBox.Size = new System.Drawing.Size(132, 22);
             this.spawnNameTextBox.TabIndex = 15;
             this.spawnNameTextBox.Text = "New_Spawn";
             // 
@@ -234,9 +253,11 @@
             this.groupBox1.Controls.Add(this.teamTextBox);
             this.groupBox1.Controls.Add(this.minTimeTextBox);
             this.groupBox1.Controls.Add(this.maxTimeTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(248, 0);
+            this.groupBox1.Location = new System.Drawing.Point(331, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(238, 461);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(317, 567);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spawn Entry";
@@ -245,9 +266,10 @@
             // 
             this.uniqueSpawnCheckBox.AutoSize = true;
             this.uniqueSpawnCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.uniqueSpawnCheckBox.Location = new System.Drawing.Point(134, 179);
+            this.uniqueSpawnCheckBox.Location = new System.Drawing.Point(179, 220);
+            this.uniqueSpawnCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.uniqueSpawnCheckBox.Name = "uniqueSpawnCheckBox";
-            this.uniqueSpawnCheckBox.Size = new System.Drawing.Size(94, 17);
+            this.uniqueSpawnCheckBox.Size = new System.Drawing.Size(119, 21);
             this.uniqueSpawnCheckBox.TabIndex = 19;
             this.uniqueSpawnCheckBox.Text = "Unique spawn";
             this.uniqueSpawnCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -256,18 +278,21 @@
             // allSpawnsListBox
             // 
             this.allSpawnsListBox.FormattingEnabled = true;
-            this.allSpawnsListBox.Location = new System.Drawing.Point(492, 12);
+            this.allSpawnsListBox.ItemHeight = 16;
+            this.allSpawnsListBox.Location = new System.Drawing.Point(656, 15);
+            this.allSpawnsListBox.Margin = new System.Windows.Forms.Padding(4);
             this.allSpawnsListBox.Name = "allSpawnsListBox";
-            this.allSpawnsListBox.Size = new System.Drawing.Size(163, 446);
+            this.allSpawnsListBox.Size = new System.Drawing.Size(216, 548);
             this.allSpawnsListBox.TabIndex = 20;
             this.allSpawnsListBox.SelectedIndexChanged += new System.EventHandler(this.allSpawnsListBox_SelectedIndexChanged);
             this.allSpawnsListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.allSpawnsListBox_MouseDoubleClick);
             // 
             // loadSpawnButton
             // 
-            this.loadSpawnButton.Location = new System.Drawing.Point(12, 467);
+            this.loadSpawnButton.Location = new System.Drawing.Point(16, 575);
+            this.loadSpawnButton.Margin = new System.Windows.Forms.Padding(4);
             this.loadSpawnButton.Name = "loadSpawnButton";
-            this.loadSpawnButton.Size = new System.Drawing.Size(642, 23);
+            this.loadSpawnButton.Size = new System.Drawing.Size(856, 28);
             this.loadSpawnButton.TabIndex = 21;
             this.loadSpawnButton.Text = "Load Spawn File";
             this.loadSpawnButton.UseVisualStyleBackColor = true;
@@ -275,9 +300,10 @@
             // 
             // saveSpawnButton
             // 
-            this.saveSpawnButton.Location = new System.Drawing.Point(12, 491);
+            this.saveSpawnButton.Location = new System.Drawing.Point(16, 604);
+            this.saveSpawnButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveSpawnButton.Name = "saveSpawnButton";
-            this.saveSpawnButton.Size = new System.Drawing.Size(642, 23);
+            this.saveSpawnButton.Size = new System.Drawing.Size(856, 28);
             this.saveSpawnButton.TabIndex = 22;
             this.saveSpawnButton.Text = "Save Spawn File";
             this.saveSpawnButton.UseVisualStyleBackColor = true;
@@ -285,9 +311,10 @@
             // 
             // deleteSpawnButton
             // 
-            this.deleteSpawnButton.Location = new System.Drawing.Point(662, 12);
+            this.deleteSpawnButton.Location = new System.Drawing.Point(883, 15);
+            this.deleteSpawnButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteSpawnButton.Name = "deleteSpawnButton";
-            this.deleteSpawnButton.Size = new System.Drawing.Size(89, 23);
+            this.deleteSpawnButton.Size = new System.Drawing.Size(119, 28);
             this.deleteSpawnButton.TabIndex = 23;
             this.deleteSpawnButton.Text = "Delete Spawn";
             this.deleteSpawnButton.UseVisualStyleBackColor = true;
@@ -295,9 +322,9 @@
             // 
             // SpawnEntryWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 526);
+            this.ClientSize = new System.Drawing.Size(1011, 647);
             this.Controls.Add(this.deleteSpawnButton);
             this.Controls.Add(this.saveSpawnButton);
             this.Controls.Add(this.loadSpawnButton);
@@ -305,6 +332,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.mobilesTreeView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SpawnEntryWindow";
             this.Text = "Spawn Editor";
             this.groupBox1.ResumeLayout(false);

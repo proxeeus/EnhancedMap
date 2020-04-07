@@ -104,7 +104,7 @@
     <Compile Include="Core\Network\SocketClient.cs" />
     <Compile Include="Core\SoundsManager.cs" />
     <None Include="Core\SpawnData\reagents_Nerun.map" />
-    <None Include="Core\SpawnData\SpawnerDev.cs_" />
+    <None Include="Core\SpawnData\Spawn..cs_" />
     <Compile Include="Core\SpawnDefinition.cs" />
     <Compile Include="Core\SpawnReader.cs" />
     <Compile Include="Core\SpawnWriter.cs" />
@@ -364,7 +364,7 @@
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Core\SpawnData\monsters_Grimoric_T2A.map" />
-    <None Include="Core\SpawnData\SpawnerDev_Rebirth.cs_" />
+    <None Include="Core\SpawnData\Spaw_Rebirth.cs_" />
     <None Include="Core\SpawnData\spawns_Nerun_rebirth.map" />
     <None Include="Core\SpawnData\vendors_Grimoric_T2A.map" />
     <None Include="libs\MapWindow.lua" />

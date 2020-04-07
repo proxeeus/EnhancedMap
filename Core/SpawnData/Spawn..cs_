@@ -14,16 +14,16 @@ using Server.Commands;
 
 namespace Server.Commands
 {
-    public class SpawnerDev
+    public class Spawn
 	{
 		private static int m_Count;
 
 		public static void Initialize()
 		{
-			CommandSystem.Register( "SpawnerDev", AccessLevel.Administrator, new CommandEventHandler( Generate_OnCommand ) );
+			CommandSystem.Register( "Spawn", AccessLevel.Administrator, new CommandEventHandler( Generate_OnCommand ) );
 		}
 
-		[Usage( "SpawnerDev" )]
+		[Usage( "Spawn" )]
 		[Description( "Dev version of the dynamic spawn tool." )]
 		private static void Generate_OnCommand( CommandEventArgs e )
 		{
