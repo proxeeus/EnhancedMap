@@ -1,4 +1,4 @@
-# Ultima Online spawn mapping tool
+# Spawn
 
 Disclaimer: this tool is a fork of *EnhancedMap*, an open-source, UOAM-like tool that wasn't developed by me, I'm merely using their engine to represent map data.
 
