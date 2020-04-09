@@ -120,7 +120,7 @@ namespace PremiumConverter
                             spawnDef.Team = "0";  // Hardcoded for now, not sure what this does
                             spawnDef.NPCCount = splitData[16];
                             spawnDef.HomeRange = splitData[13];
-                            spawnDef.BringToHome = true; // WARNING: for mobs it can be "ok" to have them spawn around the spawner. But for a clump of items, this sucks.
+                            spawnDef.BringToHome = false; // This is a field for Spawn.
 
                             spawnDefs.Add(spawnDef);
                         }
@@ -142,7 +142,7 @@ namespace PremiumConverter
         }
 
         /// <summary>
-        /// Asks for a .map path, processes it, and creates a Proxeeus .map file.
+        /// Asks for a .map path, processes it, and creates a Spawn .map file.
         /// </summary>
         static void Convert()
         {
@@ -157,7 +157,7 @@ namespace PremiumConverter
         }
 
         /// <summary>
-        /// Checks a Proxeeus .map file for any missing types from Items / Mobiles scripts against a given pre-compiled RunUO script core.
+        /// Checks a Spawn .map file for any missing types from Items / Mobiles scripts against a given pre-compiled RunUO script core.
         /// </summary>
         static void Check()
         {
