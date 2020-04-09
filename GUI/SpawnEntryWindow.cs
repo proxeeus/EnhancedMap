@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ultima;
 
 namespace Spawn.GUI
 {
@@ -199,6 +200,18 @@ namespace Spawn.GUI
             Spawns.Remove(SelectedSpawn);
             
 
+        }
+
+        private void GotoSpawnButton_Click(object sender, EventArgs e)
+        {
+            if (SelectedSpawn == null)
+            {
+                MessageBox.Show("Please select a valid spawn.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var command = string.Format("[go {0} {1}", SelectedSpawn.Position.X, SelectedSpawn.Position.Y);
+            Client.SendText(command);
         }
     }
 }

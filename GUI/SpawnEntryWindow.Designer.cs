@@ -52,6 +52,7 @@
             this.loadSpawnButton = new System.Windows.Forms.Button();
             this.saveSpawnButton = new System.Windows.Forms.Button();
             this.deleteSpawnButton = new System.Windows.Forms.Button();
+            this.gotoSpawnButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -320,11 +321,23 @@
             this.deleteSpawnButton.UseVisualStyleBackColor = true;
             this.deleteSpawnButton.Click += new System.EventHandler(this.deleteSpawnButton_Click);
             // 
+            // gotoSpawnButton
+            // 
+            this.gotoSpawnButton.Location = new System.Drawing.Point(883, 51);
+            this.gotoSpawnButton.Margin = new System.Windows.Forms.Padding(4);
+            this.gotoSpawnButton.Name = "gotoSpawnButton";
+            this.gotoSpawnButton.Size = new System.Drawing.Size(119, 28);
+            this.gotoSpawnButton.TabIndex = 24;
+            this.gotoSpawnButton.Text = "GoTo Spawn";
+            this.gotoSpawnButton.UseVisualStyleBackColor = true;
+            this.gotoSpawnButton.Click += new System.EventHandler(this.GotoSpawnButton_Click);
+            // 
             // SpawnEntryWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1011, 647);
+            this.Controls.Add(this.gotoSpawnButton);
             this.Controls.Add(this.deleteSpawnButton);
             this.Controls.Add(this.saveSpawnButton);
             this.Controls.Add(this.loadSpawnButton);
@@ -367,5 +380,6 @@
         private System.Windows.Forms.CheckBox uniqueSpawnCheckBox;
         private System.Windows.Forms.Button saveSpawnButton;
         private System.Windows.Forms.Button deleteSpawnButton;
+        private System.Windows.Forms.Button gotoSpawnButton;
     }
 }
