@@ -21,6 +21,8 @@ namespace Spawn.GUI
 
         public SpawnObject SelectedSpawn { get; private set; }
 
+        public bool IsMobileListLocked { get; set; }
+
         public SpawnDefinition GetGUISpawnDefinition()
         {
             var spawnDefinition = new SpawnDefinition();
@@ -93,17 +95,19 @@ namespace Spawn.GUI
         {
             var clickedNode = e.Node;
             if (clickedNode.Nodes.Count > 0) return;
-
-            spawnMobilesListBox.Items.Add(clickedNode.Text);
+            if(!IsMobileListLocked)
+                spawnMobilesListBox.Items.Add(clickedNode.Text);
         }
 
         private void addMobileTypeButton_Click(object sender, EventArgs e)
         {
-            spawnMobilesListBox.Items.Add(mobileTypeNameTextBox.Text);
+            if (!IsMobileListLocked)
+                spawnMobilesListBox.Items.Add(mobileTypeNameTextBox.Text);
         }
 
         private void allSpawnsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            IsMobileListLocked = true ;
             var selectedSpawner = ((ListBox)sender).SelectedItem as SpawnObject ;
             SelectedSpawn = selectedSpawner;
 
@@ -225,6 +229,8 @@ namespace Spawn.GUI
                 MessageBox.Show("Please select a type to remove first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (IsMobileListLocked)
+                return;
             if(Spawns == null)
                 spawnMobilesListBox.Items.Remove(spawnMobilesListBox.SelectedItem);
             
@@ -232,11 +238,47 @@ namespace Spawn.GUI
 
         private void NewSpawnButton_Click(object sender, EventArgs e)
         {
-
+            if(IsMobileListLocked)
+                IsMobileListLocked = false;
             spawnMobilesListBox.DataSource = null;
-                
-
             spawnMobilesListBox.Items.Clear();
+        }
+
+        private void UpdateSelectedSpawn()
+        {
+            if(SelectedSpawn != null)
+            {
+                SelectedSpawn.SpawnerName = spawnNameTextBox.Text;
+                SelectedSpawn.Team = Convert.ToInt32(teamTextBox.Text);
+                SelectedSpawn.UniqueSpawn = uniqueSpawnCheckBox.Checked;
+                SelectedSpawn.BringToHome = bringToHomeCheckBox.Checked;
+                SelectedSpawn.NPCCount = Convert.ToInt32(npcCountTextBox.Text);
+                SelectedSpawn.HomeRange = Convert.ToInt32(homeRangeTextBox.Text);
+                SelectedSpawn.MinTime = minTimeTextBox.Text;
+                SelectedSpawn.MaxTime = maxTimeTextBox.Text;
+                allSpawnsListBox.DataSource = null;
+                allSpawnsListBox.DataSource = Spawns;
+                RefreshUI();
+                //SelectedSpawn.Mobiles.Clear();
+                //foreach (var mobile in spawnMobilesListBox.Items)
+                //    SelectedSpawn.Mobiles.Add(mobile.ToString());
+
+            }
+        }
+
+        private void UniqueSpawnCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateSelectedSpawn();
+        }
+
+        private void BringToHomeCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateSelectedSpawn();
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            UpdateSelectedSpawn();
         }
     }
 }

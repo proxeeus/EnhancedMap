@@ -47,14 +47,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.spawnNameTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.newSpawnButton = new System.Windows.Forms.Button();
+            this.removeMobileTypeButton = new System.Windows.Forms.Button();
             this.uniqueSpawnCheckBox = new System.Windows.Forms.CheckBox();
             this.allSpawnsListBox = new System.Windows.Forms.ListBox();
             this.loadSpawnButton = new System.Windows.Forms.Button();
             this.saveSpawnButton = new System.Windows.Forms.Button();
             this.deleteSpawnButton = new System.Windows.Forms.Button();
             this.gotoSpawnButton = new System.Windows.Forms.Button();
-            this.removeMobileTypeButton = new System.Windows.Forms.Button();
-            this.newSpawnButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -177,6 +178,7 @@
             this.bringToHomeCheckBox.Text = "Bring to Home";
             this.bringToHomeCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bringToHomeCheckBox.UseVisualStyleBackColor = true;
+            this.bringToHomeCheckBox.CheckedChanged += new System.EventHandler(this.BringToHomeCheckBox_CheckedChanged);
             // 
             // mobileTypeNameTextBox
             // 
@@ -198,6 +200,8 @@
             // 
             // spawnMobilesListBox
             // 
+            this.spawnMobilesListBox.BackColor = System.Drawing.SystemColors.Window;
+            this.spawnMobilesListBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.spawnMobilesListBox.FormattingEnabled = true;
             this.spawnMobilesListBox.ItemHeight = 16;
             this.spawnMobilesListBox.Location = new System.Drawing.Point(20, 331);
@@ -238,6 +242,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.updateButton);
             this.groupBox1.Controls.Add(this.newSpawnButton);
             this.groupBox1.Controls.Add(this.removeMobileTypeButton);
             this.groupBox1.Controls.Add(this.uniqueSpawnCheckBox);
@@ -267,6 +272,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spawn Entry";
             // 
+            // newSpawnButton
+            // 
+            this.newSpawnButton.Location = new System.Drawing.Point(7, 195);
+            this.newSpawnButton.Name = "newSpawnButton";
+            this.newSpawnButton.Size = new System.Drawing.Size(76, 43);
+            this.newSpawnButton.TabIndex = 21;
+            this.newSpawnButton.Text = "New";
+            this.newSpawnButton.UseVisualStyleBackColor = true;
+            this.newSpawnButton.Click += new System.EventHandler(this.NewSpawnButton_Click);
+            // 
+            // removeMobileTypeButton
+            // 
+            this.removeMobileTypeButton.Location = new System.Drawing.Point(91, 295);
+            this.removeMobileTypeButton.Name = "removeMobileTypeButton";
+            this.removeMobileTypeButton.Size = new System.Drawing.Size(105, 28);
+            this.removeMobileTypeButton.TabIndex = 20;
+            this.removeMobileTypeButton.Text = "Remove";
+            this.removeMobileTypeButton.UseVisualStyleBackColor = true;
+            this.removeMobileTypeButton.Click += new System.EventHandler(this.RemoveMobileTypeButton_Click);
+            // 
             // uniqueSpawnCheckBox
             // 
             this.uniqueSpawnCheckBox.AutoSize = true;
@@ -279,6 +304,7 @@
             this.uniqueSpawnCheckBox.Text = "Unique spawn";
             this.uniqueSpawnCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.uniqueSpawnCheckBox.UseVisualStyleBackColor = true;
+            this.uniqueSpawnCheckBox.CheckedChanged += new System.EventHandler(this.UniqueSpawnCheckBox_CheckedChanged);
             // 
             // allSpawnsListBox
             // 
@@ -336,25 +362,15 @@
             this.gotoSpawnButton.UseVisualStyleBackColor = true;
             this.gotoSpawnButton.Click += new System.EventHandler(this.GotoSpawnButton_Click);
             // 
-            // removeMobileTypeButton
+            // updateButton
             // 
-            this.removeMobileTypeButton.Location = new System.Drawing.Point(91, 295);
-            this.removeMobileTypeButton.Name = "removeMobileTypeButton";
-            this.removeMobileTypeButton.Size = new System.Drawing.Size(105, 28);
-            this.removeMobileTypeButton.TabIndex = 20;
-            this.removeMobileTypeButton.Text = "Remove";
-            this.removeMobileTypeButton.UseVisualStyleBackColor = true;
-            this.removeMobileTypeButton.Click += new System.EventHandler(this.RemoveMobileTypeButton_Click);
-            // 
-            // newSpawnButton
-            // 
-            this.newSpawnButton.Location = new System.Drawing.Point(7, 22);
-            this.newSpawnButton.Name = "newSpawnButton";
-            this.newSpawnButton.Size = new System.Drawing.Size(63, 160);
-            this.newSpawnButton.TabIndex = 21;
-            this.newSpawnButton.Text = "New";
-            this.newSpawnButton.UseVisualStyleBackColor = true;
-            this.newSpawnButton.Click += new System.EventHandler(this.NewSpawnButton_Click);
+            this.updateButton.Location = new System.Drawing.Point(98, 195);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(74, 46);
+            this.updateButton.TabIndex = 22;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // SpawnEntryWindow
             // 
@@ -407,5 +423,6 @@
         private System.Windows.Forms.Button gotoSpawnButton;
         private System.Windows.Forms.Button removeMobileTypeButton;
         private System.Windows.Forms.Button newSpawnButton;
+        private System.Windows.Forms.Button updateButton;
     }
 }

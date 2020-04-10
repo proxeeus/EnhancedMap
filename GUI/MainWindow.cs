@@ -867,6 +867,7 @@ namespace Spawn.GUI
         private void ECanvas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             // Add Spawner handle
+            _spawnEntrywindow.IsMobileListLocked = true;
             var spawnEntryData = _spawnEntrywindow.GetGUISpawnDefinition();
             spawnEntryData.X = MouseManager.Location.X.ToString();
             spawnEntryData.Y = MouseManager.Location.Y.ToString();
