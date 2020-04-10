@@ -106,6 +106,13 @@
     <Compile Include="Core\Network\Protocol.cs" />
     <Compile Include="Core\Network\SocketClient.cs" />
     <Compile Include="Core\SoundsManager.cs" />
+    <None Include="Core\SpawnData\converted_britain_sewer.map" />
+    <None Include="Core\SpawnData\converted_delucia.map" />
+    <None Include="Core\SpawnData\converted_fire.map" />
+    <None Include="Core\SpawnData\converted_ice.map" />
+    <None Include="Core\SpawnData\converted_lost_lands.map" />
+    <None Include="Core\SpawnData\converted_papua.map" />
+    <None Include="Core\SpawnData\converted_terathan_keep.map" />
     <None Include="Core\SpawnData\reagents_Nerun.map" />
     <None Include="Core\SpawnData\Spawn..cs_" />
     <Compile Include="Core\SpawnDefinition.cs" />

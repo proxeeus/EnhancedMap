@@ -213,5 +213,30 @@ namespace Spawn.GUI
             var command = string.Format("[go {0} {1}", SelectedSpawn.Position.X, SelectedSpawn.Position.Y);
             Client.SendText(command);
         }
+
+        private void RemoveMobileTypeButton_Click(object sender, EventArgs e)
+        {
+            if (spawnMobilesListBox.Items == null)
+                return;
+            if (spawnMobilesListBox.Items.Count == 0)
+                return;
+            if (spawnMobilesListBox.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a type to remove first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(Spawns == null)
+                spawnMobilesListBox.Items.Remove(spawnMobilesListBox.SelectedItem);
+            
+        }
+
+        private void NewSpawnButton_Click(object sender, EventArgs e)
+        {
+
+            spawnMobilesListBox.DataSource = null;
+                
+
+            spawnMobilesListBox.Items.Clear();
+        }
     }
 }
