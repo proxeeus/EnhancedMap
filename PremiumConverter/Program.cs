@@ -33,6 +33,7 @@ namespace PremiumConverter
             Console.WriteLine("1) Convert a single PremiumSpawner .map to an UOSpawner .map");
             Console.WriteLine("2) Batch convert (parses a directory for all .map files inside and converts them).");
             Console.WriteLine("3) Validate .map file against the scripts core");
+            Console.WriteLine("4) Batch validation (parses a directory for all .map files inside and validates them).");
             Console.WriteLine("Q) Quit");
 
             switch(Console.ReadLine().ToLower())
@@ -44,13 +45,30 @@ namespace PremiumConverter
                     BatchConvert();
                     return true;
                 case "3":
-                    Check();
+                    Validate();
+                    return true;
+                case "4":
+                    BatchValidate();
                     return true;
                 case "q":
                     return false;
                 default:
                     return true;
             }
+        }
+
+        private static void BatchValidate()
+        {
+            Console.Clear();
+            Console.Write("Enter the directory containing the .map files:");
+            var premiumPath = Console.ReadLine();
+
+            var rootMapDir = new DirectoryInfo(premiumPath);
+            foreach (var file in rootMapDir.GetFiles("*.map"))
+                ValidateSingleFile(file.FullName);
+
+            Console.WriteLine("Done!");
+            Console.ReadLine();
         }
 
         static void BatchConvert()
@@ -156,19 +174,31 @@ namespace PremiumConverter
             Console.ReadLine();
         }
 
+        static void Validate()
+        {
+            Console.Clear();
+            Console.WriteLine("Enter the path of the Premium Spawner .map file (drag & drop works):");
+            var premiumPath = Console.ReadLine();
+
+            ValidateSingleFile(premiumPath);
+
+            Console.WriteLine("Done!");
+            Console.ReadLine();
+        }
+
         /// <summary>
         /// Checks a Spawn .map file for any missing types from Items / Mobiles scripts against a given pre-compiled RunUO script core.
         /// </summary>
-        static void Check()
+        static void ValidateSingleFile(string mapPath)
         {
             Console.Clear();
             Console.WriteLine("Loading RunUO script core from");
             Console.WriteLine("'{0}'", ConfigurationManager.AppSettings["RunUOCore"]);
+            var scriptCore = Assembly.LoadFrom(ConfigurationManager.AppSettings["RunUOCore"]);
             Console.WriteLine("Successfully loaded assembly!");
             Console.WriteLine("");
-            Console.WriteLine("Enter the path of the Premium Spawner .map file (drag & drop works):");
-            var scriptCore = Assembly.LoadFrom(ConfigurationManager.AppSettings["RunUOCore"]);
-            var mapPath = Console.ReadLine();
+
+            Console.WriteLine("Validating map '{0}'", mapPath);
 
             var types = Helpers.LoadSpawnTypesFrom(mapPath);
             var partialMatches = new List<string>();
