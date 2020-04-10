@@ -131,9 +131,9 @@ namespace Spawn.Core.MapObjects
             var mobBuilder = new StringBuilder();
             var separator = string.Empty;
             if (UniqueSpawn)
-                separator = ", ";
+                separator = ",";
             else
-                separator = "| ";
+                separator = "|";
             var mobIndex = 1;
             for(var i = 0; i < Mobiles.Count; i++)
             {
