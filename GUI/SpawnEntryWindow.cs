@@ -55,15 +55,29 @@ namespace Spawn.GUI
             allSpawnsListBox.Update();
         }
 
-        public SpawnEntryWindow()
+        private void InitForm()
         {
-            InitializeComponent();
             InitMobileTypes();
             Spawns = new BindingList<SpawnObject>();
             allSpawnsListBox.DataSource = Spawns;
-            
+            spawnMobilesListBox.DataSource = null;
+
+            teamTextBox.Text = "0";
+            spawnNameTextBox.Text = "<Name>";
+            homeRangeTextBox.Text = "5";
+            minTimeTextBox.Text = "2.5";
+            maxTimeTextBox.Text = "10.0";
+            npcCountTextBox.Text = "1";
+            bringToHomeCheckBox.Checked = false;
+            uniqueSpawnCheckBox.Checked = false;
 
             if (Spawns == null) Spawns = new BindingList<SpawnObject>();
+        }
+
+        public SpawnEntryWindow()
+        {
+            InitializeComponent();
+            InitForm();
         }
 
         private void InitMobileTypes()
@@ -279,6 +293,11 @@ namespace Spawn.GUI
         private void UpdateButton_Click(object sender, EventArgs e)
         {
             UpdateSelectedSpawn();
+        }
+
+        private void NewSpawnFileButton_Click(object sender, EventArgs e)
+        {
+            InitForm();
         }
     }
 }

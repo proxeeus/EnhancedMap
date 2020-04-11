@@ -47,6 +47,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.spawnNameTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.updateButton = new System.Windows.Forms.Button();
             this.newSpawnButton = new System.Windows.Forms.Button();
             this.removeMobileTypeButton = new System.Windows.Forms.Button();
             this.uniqueSpawnCheckBox = new System.Windows.Forms.CheckBox();
@@ -55,7 +56,7 @@
             this.saveSpawnButton = new System.Windows.Forms.Button();
             this.deleteSpawnButton = new System.Windows.Forms.Button();
             this.gotoSpawnButton = new System.Windows.Forms.Button();
-            this.updateButton = new System.Windows.Forms.Button();
+            this.newSpawnFileButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -272,6 +273,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spawn Entry";
             // 
+            // updateButton
+            // 
+            this.updateButton.Location = new System.Drawing.Point(98, 195);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(74, 46);
+            this.updateButton.TabIndex = 22;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
             // newSpawnButton
             // 
             this.newSpawnButton.Location = new System.Drawing.Point(7, 195);
@@ -331,7 +342,7 @@
             // 
             // saveSpawnButton
             // 
-            this.saveSpawnButton.Location = new System.Drawing.Point(16, 604);
+            this.saveSpawnButton.Location = new System.Drawing.Point(16, 611);
             this.saveSpawnButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveSpawnButton.Name = "saveSpawnButton";
             this.saveSpawnButton.Size = new System.Drawing.Size(856, 28);
@@ -362,21 +373,22 @@
             this.gotoSpawnButton.UseVisualStyleBackColor = true;
             this.gotoSpawnButton.Click += new System.EventHandler(this.GotoSpawnButton_Click);
             // 
-            // updateButton
+            // newSpawnFileButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(98, 195);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(74, 46);
-            this.updateButton.TabIndex = 22;
-            this.updateButton.Text = "Update";
-            this.updateButton.UseVisualStyleBackColor = true;
-            this.updateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            this.newSpawnFileButton.Location = new System.Drawing.Point(16, 646);
+            this.newSpawnFileButton.Name = "newSpawnFileButton";
+            this.newSpawnFileButton.Size = new System.Drawing.Size(856, 28);
+            this.newSpawnFileButton.TabIndex = 25;
+            this.newSpawnFileButton.Text = "New Spawn File";
+            this.newSpawnFileButton.UseVisualStyleBackColor = true;
+            this.newSpawnFileButton.Click += new System.EventHandler(this.NewSpawnFileButton_Click);
             // 
             // SpawnEntryWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 647);
+            this.ClientSize = new System.Drawing.Size(1011, 681);
+            this.Controls.Add(this.newSpawnFileButton);
             this.Controls.Add(this.gotoSpawnButton);
             this.Controls.Add(this.deleteSpawnButton);
             this.Controls.Add(this.saveSpawnButton);
@@ -424,5 +436,6 @@
         private System.Windows.Forms.Button removeMobileTypeButton;
         private System.Windows.Forms.Button newSpawnButton;
         private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button newSpawnFileButton;
     }
 }
