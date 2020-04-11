@@ -92,14 +92,26 @@ namespace Spawn.GUI
         {
             treeView.Nodes.Clear();
             var rootDirectoryInfo = new DirectoryInfo(path);
-            treeView.Nodes.Add(CreateDirectoryNode(rootDirectoryInfo));
+            var useMobileItemsAsRoot = ConfigurationManager.AppSettings["OnlyLoadMobilesItemsDirs"].ToBool();
+            treeView.Nodes.Add(CreateDirectoryNode(rootDirectoryInfo, useMobileItemsAsRoot));
         }
 
-        private static TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo)
+        private static TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo, bool useMobileItemsAsRoot)
         {
             var directoryNode = new TreeNode(directoryInfo.Name);
             foreach (var directory in directoryInfo.GetDirectories())
-                directoryNode.Nodes.Add(CreateDirectoryNode(directory));
+            {
+                if (useMobileItemsAsRoot)
+                {
+                    if (directory.Name == "Mobiles" || directory.Name == "Items")
+                        directoryNode.Nodes.Add(CreateDirectoryNode(directory, false));
+                }
+                else
+                {
+                    directoryNode.Nodes.Add(CreateDirectoryNode(directory, false));
+                }
+            }
+
             foreach (var file in directoryInfo.GetFiles())
                 directoryNode.Nodes.Add(new TreeNode(Path.GetFileNameWithoutExtension(file.Name)));
             return directoryNode;
