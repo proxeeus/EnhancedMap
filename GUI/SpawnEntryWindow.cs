@@ -57,6 +57,21 @@ namespace Spawn.GUI
 
         private void InitForm()
         {
+            if(SelectedSpawn != null)
+            {
+                RenderObjectsManager.RemoveSpawn(SelectedSpawn);
+                Spawns.Remove(SelectedSpawn);
+            }
+            if(Spawns != null)
+            {
+                foreach (var spawn in Spawns)
+                {
+                    RenderObjectsManager.RemoveSpawn(spawn);
+                }
+                Spawns.Clear();
+            }
+
+
             InitMobileTypes();
             Spawns = new BindingList<SpawnObject>();
             allSpawnsListBox.DataSource = Spawns;
